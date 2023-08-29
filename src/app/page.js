@@ -1,10 +1,13 @@
-import MetaTags from './components/MetaTags'
+import Header from "@/components/Header"
+import MainPage from "./(pages)/(main)/main"
+import Footer from "@/components/Footer"
 
 export default function Home() {
   return (
     <>
-      <MetaTags title={'직투'} />
-      <h1>하염</h1>
+      <Header />
+        <MainPage />
+      <Footer />
     </>
   )
 }
