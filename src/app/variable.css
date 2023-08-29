@@ -11,14 +11,21 @@
     src: url("/fonts/SpoqaHanSansNeo-Regular.ttf") format("truetype");
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
   
+body {
+    font-family: "Spoqa Han Sans Neo";
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
