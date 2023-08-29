@@ -1,0 +1,193 @@
+.container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  min-width: 360px;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width:767px) {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+/* Banner-Bottom.jsx */
+.bt {
+  background-color: #627AF5;
+  height: 540px;
+
+  @media(max-width: 767px) {
+    height: 1000px;
+  }
+}
+/* Banner-Bottom.jsx */
+
+.innerContainer {
+  padding-left: 16px;
+  position: absolute;
+  display: flex;
+  min-width: 1024px;
+  height: 100vh;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.btInner {
+  height: 100%;
+}
+
+.headerContainer {
+  position: absolute;
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  @media (max-width: 767px) {
+    width: 100%;
+    left: 0;
+    position: absolute;
+  }
+}
+
+.btHeaderC {
+  @media(max-width: 767px) {
+    padding-top: 136px;
+    justify-content: flex-start;
+  }
+}
+
+.headerWrapper {
+  color: #fff;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  @media (max-width: 767px) {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.header {
+  font-size: 54px;
+  margin: 0;
+  
+  @media (max-width: 767px) {
+  
+    font-size: 28px;
+  }
+}
+
+.descriptionWrapper {
+  font-size: 22px;
+  margin-top: 18px;
+
+  @media (max-width: 767px) {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.dtde {
+  margin-top: 0;
+
+  @media screen and (max-width: 767px) {
+    width: auto;
+  }
+}
+
+.description {
+  margin: 0;
+}
+
+.goBtn {
+  background-color: #627AF5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 600;
+  width: 168px;
+  height: 48px;
+  margin-top: 28px;
+
+  @media (max-width: 767px) {
+  display: none;
+  }
+}
+
+.btgo {
+  background-color: #fff;
+  color: #627AF5;
+  width: 200px;
+  margin-top: 32px;
+}
+
+.imgWrapper {
+    height: 100vh;
+    width: 100%;
+}
+
+.img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Banner-Middle.jsx */
+.mbContainer {
+  height: 500px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+
+  @media(max-width: 767px) {
+    height: 100vh;
+  }
+}
+
+.mbHeader {
+  position: absolute;
+  width: 100vw;
+  top: 25%;
+  min-width: 360px;
+  
+  color: #fff;
+  font-size: 54px;
+  /* margin: 0; */
+
+  @media(max-width: 767px) {
+    font-size: 36px;
+    top: 40%;
+  }
+}
+
+.mbImg {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.btDescription {
+  color: #c1c1c1;
+  font-size: 12px;
+  padding: 28px 0 0 4px;
+
+  @media(max-width: 767px) {
+    width: 270px;
+    padding: 24px 0 0 0;
+    margin: 0 auto;
+  }
+}

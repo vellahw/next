@@ -10,7 +10,7 @@ export const metadata = {
 export default function EventPage() {
     return (
       <>
-        <h1>이벤트</h1>
+        <h1>이벤트 페이지</h1>
       </>
     )
   }

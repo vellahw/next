@@ -11,7 +11,7 @@ export const metadata = {
 export default function BuildingPage() {
     return (
       <>
-        <h1>빌딩</h1>
+        <h1>빌딩 페이지</h1>
       </>
     )
   }
