@@ -13,7 +13,7 @@ function Header() {
     {
       no: 2,
       name: '빌딩 정보',
-      path: '/menu'
+      path: '/building'
     },
     {
       no: 3,
