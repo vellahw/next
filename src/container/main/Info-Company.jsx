@@ -1,8 +1,8 @@
-import style from '../../styles/main/info.module.css'
+import style from '../../styles/css/main/info.module.css'
 
 function CompanyInfo() {
   return(
-    <div className={style.infoContainer}>
+    <section className={style.infoContainer}>
       <h2 className={style.title}>회사 소개</h2>
 
       <div className={style.headerWrapper}>
@@ -34,7 +34,7 @@ function CompanyInfo() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

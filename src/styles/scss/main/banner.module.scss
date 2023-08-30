@@ -1,33 +1,24 @@
-.container {
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  min-width: 360px;
+@mixin flex-center($position) {
+  position: #{$position};
   display: flex;
   justify-content: center;
+}
+
+.container {
+  height: 100vh;
+  overflow: hidden;
+  min-width: 360px;
+  @include flex-center(relative);
 
   @media (max-width:767px) {
     width: 100vw;
     max-width: 100%;
-    display: flex;
     margin: 0 auto;
-    justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
   }
 }
-
-/* Banner-Bottom.jsx */
-.bt {
-  background-color: #627AF5;
-  height: 540px;
-
-  @media(max-width: 767px) {
-    height: 1000px;
-  }
-}
-/* Banner-Bottom.jsx */
 
 .innerContainer {
   padding-left: 16px;
@@ -39,30 +30,23 @@
   max-width: 1024px;
 }
 
-.btInner {
-  height: 100%;
-}
-
 .headerContainer {
-  position: absolute;
   max-width: 1024px;
   margin: 0 auto;
   height: 100%;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
+  @include flex-center(absolute);
   
   @media (max-width: 767px) {
     width: 100%;
-    left: 0;
     position: absolute;
   }
-}
 
-.btHeaderC {
-  @media(max-width: 767px) {
-    padding-top: 136px;
-    justify-content: flex-start;
+  &_bt {
+    @media(max-width: 767px) {
+      padding-top: 136px;
+      justify-content: flex-start;
+    }
   }
 }
 
@@ -81,10 +65,8 @@
 
 .header {
   font-size: 54px;
-  margin: 0;
   
   @media (max-width: 767px) {
-  
     font-size: 28px;
   }
 }
@@ -100,91 +82,94 @@
   }
 }
 
-.dtde {
-  margin-top: 0;
+.description {
+  padding-bottom: 4px;
 
   @media screen and (max-width: 767px) {
-    width: auto;
+    padding-bottom: 0;
   }
 }
 
-.description {
-  margin: 0;
-}
-
 .goBtn {
-  background-color: #627AF5;
-  color: #fff;
+  background-color: var(--primary);
+  color: var(--color-white);
   border: none;
   border-radius: 4px;
   font-size: 20px;
   font-weight: 600;
   width: 168px;
   height: 48px;
-  margin-top: 28px;
+  margin-top: 32px;
 
   @media (max-width: 767px) {
-  display: none;
+    display: none;
   }
-}
-
-.btgo {
-  background-color: #fff;
-  color: #627AF5;
-  width: 200px;
-  margin-top: 32px;
 }
 
 .imgWrapper {
-    height: 100vh;
-    width: 100%;
+  width: 100%;
+  height: 100vh;
 }
 
 .img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-}
-
-/* Banner-Middle.jsx */
-.mbContainer {
-  height: 500px;
-  overflow: hidden;
-  text-align: center;
-  position: relative;
-
-  @media(max-width: 767px) {
-    height: 100vh;
-  }
-}
-
-.mbHeader {
-  position: absolute;
-  width: 100vw;
-  top: 25%;
-  min-width: 360px;
-  
-  color: #fff;
-  font-size: 54px;
-  /* margin: 0; */
-
-  @media(max-width: 767px) {
-    font-size: 36px;
-    top: 40%;
-  }
-}
-
-.mbImg {
-  object-fit: cover;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  &_m {
+    filter: brightness(0.8);
+  }
 }
 
-.btDescription {
-  color: #c1c1c1;
-  font-size: 12px;
-  padding: 28px 0 0 4px;
+// Banner-Middle.jsx
+.m_container {
+  @extend .container;
+  height: 500px;
+  text-align: center;
+  align-items: center;
+  @include flex-center(relative);
+  margin-bottom: 100px;
+    
+  @media(max-width: 767px) {
+    height: 100vh;
+  }
+}
 
+.m_headerWrapper {
+  @extend .headerWrapper;
+  position:absolute;
+  font-size: 38px;
+}
+
+// Banner-Bottom.jsx
+.bt_container {
+  @extend .container;
+  background-color: var(--primary);
+  height: 540px;
+ 
+  @media(max-width: 767px) {
+    height: 1000px;
+  }
+}
+
+.bt_innerContainer {
+  @extend .innerContainer;
+  height: 100%;
+}
+
+.bt_goBtn {
+  @extend .goBtn;
+  background-color: var(--color-white);
+  color: var(--primary);
+  width: 200px;
+  margin-top: 16px;
+}
+
+.bt_description {
+  color: #c1c1c1;
+  font-size: 13px;
+  padding: 28px 0 0 4px;
+  
   @media(max-width: 767px) {
     width: 270px;
     padding: 24px 0 0 0;

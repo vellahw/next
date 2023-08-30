@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: '직투 - 이벤트 목록',
   openGraph: {

@@ -1,0 +1,138 @@
+.container {
+    background-color: #F6F6F9;
+    height: auto;
+}
+
+.wrapper {
+  height: auto;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 28px 16px 100px 16px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  @media (max-width: 767px) {
+    padding: 80px 0 80px 0;
+    margin: 0 16px;
+    position: relative;
+    height: auto;
+  }
+
+  @media (max-width: 1049px) {
+      margin: 0 16px;
+  }
+}
+
+.sectionHeader {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contentsWrap {
+    margin-top: 44px;
+    margin-left: 90px;
+    
+    @media(max-width: 767px) {
+        margin-left: 0;
+    }
+}
+
+.headerWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 46px;
+  
+    @media(max-width: 767px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+}
+
+.viewAllWrap {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .arrow-icon{
+        font-size: 18px;
+        padding-left: 3px;
+        
+        @media(max-width: 767px) {
+            font-size: 17px;
+            padding-top: 1px;
+        }
+    }
+}
+
+.viewAll {
+    font-size: 20px;
+
+    @media(max-width: 767px) {
+        font-size: 15px;
+    }
+}
+
+.arrow {
+    padding-left: 3px;
+    
+    @media(max-width: 767px) {
+        font-size: 17px;
+        padding-top: 1px;
+    }
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    padding: 28px 0 34px 0;
+    margin-top: 6px;
+    cursor: pointer;
+    border-bottom: 1px solid #dadee3;
+
+    @media screen and (max-width: 767px) {
+        padding: 0;
+    }
+}
+
+.title {
+    font-weight: normal;
+    font-size: 26px;
+    margin: 0 0 12px 0;
+    color: #171717;
+
+    @media(max-width: 767px) {
+        font-size: 16px;
+        margin: 26px 0 12px 0;
+    }
+}
+
+.info {
+    color: #626870;
+
+    @media(max-width: 767px) {
+        padding: 0 0 24px 0;
+        font-size: 14px;
+    }
+}
+
+.press {
+    font-weight: 600;
+    color: #323232;
+}
+
+.line {
+    padding: 0 10px 0 10px;
+}
+
+.date {
+    
+}
