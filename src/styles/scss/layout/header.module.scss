@@ -1,15 +1,19 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
 .header {
   min-width: 360px;
 }
 
 .headerWrapper {
+  @include flex-center;
   min-width: 360px;
   width: 100vw;
   height: 64px;
-  align-items: center;
   position: fixed;
   z-index: 999;
-  display: flex;
   /* color: #fff; */
   transition: background-color 0.2s linear 0s;
   
@@ -25,14 +29,13 @@
 }
 
 .navbar {
+  @include flex-center;
   padding: 0 16px;
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
   height: 100%;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
 
   @media screen and (min-width: 767px) {
     margin-top: 4px;
@@ -49,6 +52,22 @@
   }
 }
 
+.iconWrapper {
+  display: none;
+  font-size: 20px;
+
+  @media(max-width: 782px) {
+    display: block;
+  }
+
+  @media(min-width: 767px) {
+    .icon {
+      font-size: 20px;
+    }
+  }
+}
+
+
 .navItemWrapper {
   @media screen and (max-width: 782px) {
     display: none;
@@ -56,19 +75,21 @@
 }
 
 .navItemList {
-  display: flex;
-  align-items: center;
+  @include flex-center;
   font-size: 16px;
-
   margin: 0;
   padding: 0;
+
+  &_side {
+    padding: 0;
+  }
 }
 
 .navItem {
   cursor: pointer;
   margin: 0 4px;
   padding: 12px;
-  font-weight: 500; 
+  // font-weight: 600; 
 }
 
 .appDownbtn {
@@ -88,4 +109,37 @@
   @media screen and (max-width: 767px) {
     border: none;
   }
+}
+
+// SideNav.jsx
+.sideNav {
+  display: none;
+  
+
+  &_open {
+    @include flex-center;
+    background-color: #fff;
+    width: 100%;
+    height: 304px;
+    padding-left: 16px;
+    z-index: 999;
+    position: fixed;
+    top: 57px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  opacity: 0.4;
+  background-color: rgb(0, 0, 0);
+  z-index: 5;
+
+  &_none {
+    display: none;
+  }
+}
+
+.colorChange {
+  color: var(--primary);
 }

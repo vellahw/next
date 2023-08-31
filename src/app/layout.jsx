@@ -1,5 +1,7 @@
+'use client';
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import { RecoilRoot } from 'recoil';
 
 export const metadata = {
   title: '누구나 쉽게, 부동산 조각투자 플랫폼 직투',
@@ -13,11 +15,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body>
+      <RecoilRoot>
         <Header/>
         {children}
         <Footer />
+      </RecoilRoot>
       </body>
     </html>
   )

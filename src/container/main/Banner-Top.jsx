@@ -1,11 +1,8 @@
 'use client';
 
 import Image from "next/image"
-import img1 from '/public/images/cover1.png'
-import img2 from '/public/images/cover2.png'
-import img3 from '/public/images/cover3.png'
-import img4 from '/public/images/cover4.png'
-import style from '../../styles/css/main/banner.module.css'
+import banner1 from '/public/images/banners/cover1.png' 
+import style from '../../styles/css/banner.module.css'
 import Button from "@/components/Button"
 
 function TopBanner() {
@@ -38,7 +35,7 @@ function TopBanner() {
       </div>
 
       <div className={style.imgWrapper}>
-        <Image className={style.img} src={img1} alt="최상단 배너 이미지1"></Image>
+        <Image className={style.img} src={banner1} alt="최상단 배너 이미지1"></Image>
       </div>
     </main>
   )

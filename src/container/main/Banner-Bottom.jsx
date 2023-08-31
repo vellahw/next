@@ -1,6 +1,6 @@
 'use client';
 
-import style from '../../styles/css/main/banner.module.css'
+import style from '../../styles/css/banner.module.css'
 import Button from '@/components/Button'
 
 function BottomBanner() {

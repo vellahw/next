@@ -1,16 +1,16 @@
-import style from '../../styles/css/main/info.module.css'
+import style from '../../styles/css/info.module.css'
+import { SectionHeader } from '../../components/SectionHeader'
 
 function CompanyInfo() {
   return(
-    <section className={style.infoContainer}>
-      <h2 className={style.title}>회사 소개</h2>
-
-      <div className={style.headerWrapper}>
-        <p className={style.header}>직투는 누구나 쉽게 부동산에 투자하고</p>
-        <p className={style.header}>그 권리를 사고 팔 수 있는</p>
-        <p className={style.header}>부동산 조각 투자 플랫폼입니다.</p>
-      </div>
-
+    <section className={style.container}>
+      <SectionHeader 
+          title={'회사 소개'}
+          header1={'직투는 누구나 쉽게 부동산에 투자하고'}
+          header2={'그 권리를 사고 팔 수 있는'}
+          header3={'부동산 조각 투자 플랫폼입니다.'}
+        />
+        
       <div className={style.cardWrapper}>
         <div className={style.card}>
           <h2 className={style.cardTitle}>안심하세요</h2>

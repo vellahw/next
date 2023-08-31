@@ -1,6 +1,6 @@
 import Image from "next/image"
-import banner from '/public/images/m-banner.jpg'
-import style from '../../styles/css/main/banner.module.css'
+import banner from '/public/images/banners/m-banner.jpg'
+import style from '../../styles/css/banner.module.css'
 
 function MiddleBanner() {
     return(

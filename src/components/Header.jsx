@@ -1,85 +1,80 @@
 'use client';
-import { useState } from "react";
+
 import Link from "next/link"
-import style from '../styles/css/layout/header.module.css'
 import Image from "next/image"
+import { AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
+import {React, useEffect} from 'react';
+import { useRecoilState } from 'recoil';
+import { whiteNav, sideNavOpen, isScroll } from "./atom";
+import style from '../styles/css/header.module.css'
 import logo from '/public/logos/ziktu-logo.png'
-import Button from "./Button";
+import SideNav from "./SideNav";
+import { NavMenuItem } from "./NavMenuItem";
 
 function Header() {
-  const menudata = [
-    {
-      no: 1,
-      name: '직투 소식',
-      path: '/news/notice'
-    },
-    {
-      no: 2,
-      name: '빌딩 정보',
-      path: '/building'
-    },
-    {
-      no: 3,
-      name: '공시',
-      path: '/disclosure'
-    },
-    {
-      no: 4,
-      name: '이벤트',
-      path: '/event'
-    },
-    {
-      no: 5,
-      name: '채용',
-      path: '/recruit'
-    },
-    {
-      no: 6,
-      name: 'FAQ',
-      path: '/faq'
-    },
-  ]
+  const [isWhiteNav] = useRecoilState(whiteNav);
+  const [isSideNavOpen, setIsSideNavOpen] = useRecoilState(sideNavOpen);
+  const [scrollPosition, setScrollPosition] = useRecoilState(isScroll);
+  const isWhite = isWhiteNav;
 
-  const [isOpen, setIsOpen] = useState(false);
-  const showQR = ()=>{
-    alert('QR')
-  };
+  const openMenu = () => {
+    setIsSideNavOpen(true);
+  }
 
-    return (
-        <nav className={style.header}>
-          <div className={style.headerWrapper}>
-            <div className={style.navbar}>
+  const closeMenu = () => {
+    setIsSideNavOpen(false);
+  }
 
-              {/* <div className={style.logoWrapper}> */}
-              <Link href='/'>
-                <Image className={style.logo}
-                      src={logo}
-                      alt="헤더로고"
-                      priority={true}>
-                </Image>
-              </Link>  
-              {/* </div> */}
+  const handleScroll = () => {
+    setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+  }
+    
+  // useEffect(() => { 
+  //   window.removeEventListener("scroll", handleScroll);
+  //   const timer = setInterval(() => {
+  //       window.addEventListener("scroll", handleScroll);
+  //   }, 100);
+        
+  //   return () => {
+  //       document.documentElement.scrollTo(0, 0)
+  //       clearInterval(timer);
+  //       window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
-              <div className={style.navItemWrapper}>
-                <ul className={style.navItemList}>
-                  {menudata.map(i=>{
-                    return(
-                      <Link href={i.path} key={i.no}>
-                        <li className={style.navItem}>{i.name}</li>
-                      </Link>
-                    )
-                  })}
-                  <Button
-                    className={style.appDownbtn}
-                    title='직투 앱 다운로드'
-                    onClick={showQR}
-                  />
-                </ul>
-              </div>
-            </div>
+  return (
+    <nav className={style.header}>
+      <SideNav sideNavOpen={!isSideNavOpen} isSideNavOpen={setIsSideNavOpen} />
+
+      <div className={style.headerWrapper}>
+        <div className={style.navbar}>
+
+          <Link href='/'>
+            <Image className={style.logo}
+                  src={logo}
+                  alt="헤더로고"
+                  priority={true}>
+            </Image>
+          </Link>  
+          
+          <div className={style.iconWrapper}>
+            { !isSideNavOpen ? 
+              <AiOutlineMenu onClick={openMenu} className='icon'/>
+              :
+              <AiOutlineClose onClick={closeMenu} className='icon'/>
+            }
           </div>
-        </nav>
-    )
+
+          <div className={style.navItemWrapper}>
+            <ul className={style.navItemList}>
+              <NavMenuItem />
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  )
 }
 
 export default Header

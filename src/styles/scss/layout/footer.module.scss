@@ -1,0 +1,6 @@
+@use '../common/common';
+
+.footer {
+    @extend %full_container;
+    background-color: #f6f6f9;
+}

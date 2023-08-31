@@ -118,6 +118,9 @@
 
   &_m {
     filter: brightness(0.8);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -128,7 +131,6 @@
   text-align: center;
   align-items: center;
   @include flex-center(relative);
-  margin-bottom: 100px;
     
   @media(max-width: 767px) {
     height: 100vh;

@@ -1,5 +1,5 @@
 import ContentsList from "@/components/ContentsList"
-import style from '../../styles/css/main/news.module.css'
+import style from '../../styles/css/news.module.css'
 
 function NewsList() {
   return(
