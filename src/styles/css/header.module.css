@@ -1,8 +1,15 @@
-.header {
+.navWrap {
   min-width: 360px;
 }
 
-.headerWrapper {
+.navWrap_white {
+  background-color: #fff;
+  color: var(--color-black);
+  border-bottom: 1px solid #E8E8EC;
+  transition: background-color 0.2s linear 0s;
+}
+
+.navWrapper {
   display: flex;
   align-items: center;
   min-width: 360px;
@@ -10,18 +17,17 @@
   height: 64px;
   position: fixed;
   z-index: 999;
-  /* color: #fff; */
   transition: background-color 0.2s linear 0s;
 }
 @media screen and (max-width: 767px) {
-  .headerWrapper {
+  .navWrapper {
     width: 100vw;
     max-width: 100%;
     height: 56px;
   }
 }
 @media screen and (max-width: 782px) {
-  .headerWrapper {
+  .navWrapper {
     transition: none;
   }
 }
@@ -86,7 +92,7 @@
   padding: 12px;
 }
 
-.appDownbtn {
+.appDownbtn, .appDownbtn_change {
   background-color: transparent;
   color: #fff;
   border: none;
@@ -97,14 +103,18 @@
   height: 40px;
 }
 @media screen and (max-width: 782px) {
-  .appDownbtn {
+  .appDownbtn, .appDownbtn_change {
     display: none;
   }
 }
 @media screen and (max-width: 767px) {
-  .appDownbtn {
+  .appDownbtn, .appDownbtn_change {
     border: none;
   }
+}
+
+.appDownbtn_change {
+  background-color: var(--primary);
 }
 
 .sideNav {

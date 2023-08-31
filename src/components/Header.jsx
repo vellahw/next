@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from 'next/navigation'
 import { AiOutlineMenu } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
 import {React, useEffect} from 'react';
@@ -16,7 +17,7 @@ function Header() {
   const [isWhiteNav] = useRecoilState(whiteNav);
   const [isSideNavOpen, setIsSideNavOpen] = useRecoilState(sideNavOpen);
   const [scrollPosition, setScrollPosition] = useRecoilState(isScroll);
-  const isWhite = isWhiteNav;
+  const pathname = usePathname()
 
   const openMenu = () => {
     setIsSideNavOpen(true);
@@ -44,10 +45,13 @@ function Header() {
   // }, []);
 
   return (
-    <nav className={style.header}>
-      <SideNav sideNavOpen={!isSideNavOpen} isSideNavOpen={setIsSideNavOpen} />
+    <nav className={pathname != '/' ?
+         style.navWrap_white : style.navWrap
+         }
+    >
+      <SideNav sideNavOpen={!isSideNavOpen} />
 
-      <div className={style.headerWrapper}>
+      <div className={style.navWrapper}>
         <div className={style.navbar}>
 
           <Link href='/'>

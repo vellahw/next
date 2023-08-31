@@ -11,6 +11,28 @@
     height: 760px;
   }
 }
+.container {
+  height: 690px;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 100px 16px 0 16px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 80px 0 80px 0;
+    margin: 0 16px;
+    position: relative;
+    height: 760px;
+  }
+}
+@media (max-width: 1049px) {
+  .container {
+    margin: 0 16px;
+  }
+}
+
 .headerWrapper {
   margin: 38px 0 0 80px;
 }
@@ -23,4 +45,125 @@
 
 .footer {
   background-color: #f6f6f9;
+}
+@media (max-width: 767px) {
+  .footer {
+    margin-top: 0;
+    font-size: 14px;
+  }
+}
+
+.container {
+  height: 100%;
+  position: relative;
+  padding: 40px 0 80px 0;
+}
+@media (max-width: 767px) {
+  .container {
+    padding-bottom: 100px;
+  }
+}
+
+.infoWrap {
+  display: flex;
+  color: #414551;
+  padding-top: 6px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .infoWrap {
+    padding-top: 0;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .info {
+    margin-top: 3px;
+  }
+}
+
+.info_title {
+  margin-right: 4px;
+}
+
+.info_text {
+  margin-right: 12px;
+  font-weight: normal;
+  color: #414551;
+  display: inline;
+}
+
+.copy {
+  font-weight: normal;
+  color: #414551;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.article, .companyWrap {
+  color: #414551;
+  font-weight: 600;
+  padding-top: 20px;
+}
+
+.link {
+  padding-right: 18px;
+  color: #414551;
+}
+
+.companyWrap {
+  margin-top: 12px;
+}
+
+.comTitle {
+  margin-bottom: 5px;
+}
+
+.text {
+  margin-right: 12px;
+  font-weight: normal;
+  color: #414551;
+}
+@media (max-width: 767px) {
+  .text {
+    padding-bottom: 3px;
+  }
+}
+
+.snsWrap {
+  display: flex;
+  position: absolute;
+  top: 53px;
+  right: 38px;
+}
+
+.authWrap {
+  margin-top: 48px;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .authWrap {
+    flex-direction: column;
+  }
+  .authWrap .sw-area {
+    margin-left: 11px;
+  }
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  .auth {
+    font-size: 12px;
+    margin-top: 16px;
+  }
+}
+
+.authLogo {
+  margin-right: 16px;
 }

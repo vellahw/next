@@ -3,18 +3,24 @@
   align-items: center;
 }
 
-.header {
+.navWrap {
   min-width: 360px;
 }
 
-.headerWrapper {
+.navWrap_white {
+  background-color: #fff;
+  color: var(--color-black);
+  border-bottom: 1px solid #E8E8EC;
+  transition: background-color 0.2s linear 0s;
+}
+
+.navWrapper {
   @include flex-center;
   min-width: 360px;
   width: 100vw;
   height: 64px;
   position: fixed;
   z-index: 999;
-  /* color: #fff; */
   transition: background-color 0.2s linear 0s;
   
   @media screen and (max-width: 767px) {
@@ -109,6 +115,11 @@
   @media screen and (max-width: 767px) {
     border: none;
   }
+}
+
+.appDownbtn_change {
+  @extend .appDownbtn;
+  background-color: var(--primary);
 }
 
 // SideNav.jsx

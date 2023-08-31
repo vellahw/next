@@ -12,7 +12,6 @@ export function NavMenuItem() {
   const [isWhiteNav, setIsWhiteNav] = useRecoilState(whiteNav)
   const [isNavOpen, setIsNavOpen] = useRecoilState(sideNavOpen)
   const [isClick, setIsClick] = useState(false)
-  const isWhite = isWhiteNav
   const pathname = usePathname()
 
   const showQR = () => {
@@ -87,8 +86,7 @@ export function NavMenuItem() {
       <li> 
         <Button 
           className={
-          scrollPosition < 100 && isWhite === 0 ?
-           "" : style.appDownbtn
+            pathname != '/' ? style.appDownbtn_change : style.appDownbtn
           }
           title='직투 앱 다운로드'
           onClick={showQR}
