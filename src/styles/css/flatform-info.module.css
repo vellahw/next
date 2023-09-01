@@ -1,5 +1,4 @@
 .infoContainer_f {
-  height: 690px;
   max-width: 992px;
   margin: 0 auto;
   padding: 100px 16px 0 16px;
@@ -26,7 +25,12 @@
 @media (max-width: 767px) {
   .headerWrapper {
     margin: 0;
-    padding-top: 10px;
+    padding-top: 24px;
+  }
+}
+@media (max-width: 1025px) {
+  .headerWrapper {
+    margin: 24px 0;
   }
 }
 
@@ -34,14 +38,18 @@
   height: 1000px;
   padding-bottom: 100px;
 }
-
+@media (max-width: 1025px) {
+  .infoContainer_f {
+    height: 2180px;
+  }
+}
 .cardWrap {
   margin-top: 20px;
   padding: 28px 0 0 80px;
   display: flex;
   position: relative;
 }
-@media (max-width: 767px) {
+@media (max-width: 1025px) {
   .cardWrap {
     padding: 0;
     flex-direction: column;
@@ -54,22 +62,34 @@
   top: 318px;
   left: 385px;
 }
+@media (max-width: 1025px) {
+  .shif, .shif_last {
+    top: 870px;
+    left: 0;
+    width: 100%;
+  }
+}
 
 .shif_last {
   left: 691px;
+}
+@media (max-width: 1025px) {
+  .shif_last {
+    left: 0;
+    top: 1328px;
+  }
 }
 
 .card {
   position: absolute;
   background-color: #E7EBFA;
-  overflow-y: hidden;
   width: 225px;
   height: 430px;
   padding: 30px;
   border-radius: 15px;
   margin-right: 15px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1025px) {
   .card {
     position: relative;
     width: calc(100% - 48px);
@@ -83,7 +103,6 @@
 .card_dark {
   position: absolute;
   background-color: #494F66;
-  overflow-y: hidden;
   width: 225px;
   height: 430px;
   padding: 30px;
@@ -91,9 +110,21 @@
   margin-right: 15px;
   width: 532px;
   height: 210px;
-  right: 0;
+  left: 386px;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 1025px) {
+  .card_dark {
+    width: auto;
+    height: 368px;
+    left: 0;
+  }
+}
+@media screen and (max-width: 1049px) {
+  .card_dark {
+    margin-right: 0;
+  }
+}
+@media (max-width: 1025px) {
   .card_dark {
     position: relative;
     width: calc(100% - 48px);
@@ -103,14 +134,25 @@
     padding-bottom: 0;
     width: 532px;
     height: 210px;
-    right: 0;
+    left: 386px;
+  }
+}
+@media screen and (max-width: 1025px) and (max-width: 1025px) {
+  .card_dark {
+    width: auto;
+    height: 368px;
+    left: 0;
+  }
+}
+@media screen and (max-width: 1025px) and (max-width: 1049px) {
+  .card_dark {
+    margin-right: 0;
   }
 }
 
 .card_small {
   position: absolute;
   background-color: #494F66;
-  overflow-y: hidden;
   width: 225px;
   height: 430px;
   padding: 30px;
@@ -121,7 +163,7 @@
   top: 538px;
   left: 80px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1025px) {
   .card_small {
     position: relative;
     width: calc(100% - 48px);
@@ -135,6 +177,13 @@
     left: 80px;
   }
 }
+@media (max-width: 1025px) {
+  .card_small {
+    left: 0;
+    top: 918px;
+    width: auto;
+  }
+}
 
 .cardTitle, .cardTitle_white {
   line-height: 34px;
@@ -143,7 +192,7 @@
   font-size: 22px;
   font-weight: 600;
 }
-@media (max-width: 767px) {
+@media (max-width: 1025px) {
   .cardTitle, .cardTitle_white {
     width: 120px;
     line-height: 28px;
@@ -158,7 +207,7 @@
   z-index: 1;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1025px) {
   .imgContainer {
     display: flex;
     justify-content: center;
@@ -167,18 +216,34 @@
   }
 }
 
-.cardImg_sub {
+.cardImg_phone {
   position: absolute;
   width: 100%;
   height: auto;
   left: 0;
   bottom: 0;
 }
+@media (max-width: 1025px) {
+  .cardImg_phone {
+    width: 288px;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+}
 
 .cardImg_tax {
   width: 220px;
   height: auto;
   float: right;
+}
+@media screen and (max-width: 1025px) {
+  .cardImg_tax {
+    float: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25px;
+  }
 }
 
 .cardImg_re {
@@ -187,4 +252,5 @@
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 15px;
 }

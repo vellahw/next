@@ -3,11 +3,13 @@ import style from '../styles/css/info.module.css'
 export function SectionHeader({
   title,
   isCorp, 
+  isFlat,
   header1, 
   header2, 
   header3
 }){
   const isTrue = 0 === isCorp
+  const isFlatform = 0 === isFlat
 
   return (
     <>

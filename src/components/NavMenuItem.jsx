@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {React, useState} from 'react'
-import Button from './Button'
+import Button from './ui/Button'
 import style from '../styles/css/header.module.css'
 
 export function NavMenuItem() {

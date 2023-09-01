@@ -8,6 +8,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import {React, useState, useEffect} from 'react';
 import style from '../styles/css/header.module.css'
 import logo from '/public/logos/ziktu-logo.png'
+import logo_white from '/public/logos/ziktu-logo-w.png'
 import SideNav from "./SideNav";
 import { NavMenuItem } from "./NavMenuItem";
 
@@ -53,8 +54,12 @@ function Header() {
         <div className={style.navbar}>
 
           <Link href='/'>
-            <Image className={style.logo}
-                  src={logo}
+            <Image
+                  className={style.logo }
+                  src={
+                    pathname != '/' ?
+                    logo : logo_white
+                  }
                   alt="헤더로고"
                   priority={true}>
             </Image>

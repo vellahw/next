@@ -1,5 +1,6 @@
-import ContentsList from "@/components/ContentsList"
+import ContentsList from '../../components/ContentsList'
 import style from '../../styles/css/news.module.css'
+import {IoIosArrowForward} from 'react-icons/io';
 
 function NewsList() {
   return(
@@ -13,7 +14,9 @@ function NewsList() {
 
             <div className={style.viewAllWrap}>
               <div className={style.viewAll}>전체보기</div>
-              <div className={style.arrow}>화살표</div>
+              <div className={style.arrow}>
+                <IoIosArrowForward className={style.arrow_icon}/>
+              </div>
             </div>
           </div>
 

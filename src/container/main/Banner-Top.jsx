@@ -3,7 +3,7 @@
 import Image from "next/image"
 import banner1 from '/public/images/banners/cover1.png' 
 import style from '../../styles/css/banner.module.css'
-import Button from "@/components/Button"
+import Button from "@/components/ui/Button"
 
 function TopBanner() {
   const showQR = ()=>{

@@ -5,12 +5,12 @@
 }
 
 .container {
+  @include flex-center(relative);
   height: 100vh;
   overflow: hidden;
   min-width: 360px;
-  @include flex-center(relative);
 
-  @media (max-width:767px) {
+  @media (max-width:782px) {
     width: 100vw;
     max-width: 100%;
     margin: 0 auto;
@@ -21,13 +21,22 @@
 }
 
 .innerContainer {
-  padding-left: 16px;
   position: absolute;
   display: flex;
-  min-width: 1024px;
-  height: 100vh;
-  width: 100%;
+  padding-left: 16px;
+  min-width: 768px;
   max-width: 1024px;
+  width: 100%;
+  height: 100vh;
+
+  @media (max-width: 1038px) {
+    padding-left: 56px;
+  }
+
+  @media (max-width:782px) {
+    padding-left: 0;
+  }
+
 }
 
 .headerContainer {
@@ -36,17 +45,15 @@
   height: 100%;
   flex-direction: column;
   @include flex-center(absolute);
+
+  @media (max-width:1050px) {
+    padding-left: 4px;
+  }
   
-  @media (max-width: 767px) {
+  @media (max-width: 782px) {
     width: 100%;
     position: absolute;
-  }
-
-  &_bt {
-    @media(max-width: 767px) {
-      padding-top: 136px;
-      justify-content: flex-start;
-    }
+    padding-left: 0;
   }
 }
 
@@ -57,7 +64,7 @@
   flex-direction: column;
   justify-content: center;
   
-  @media (max-width: 767px) {
+  @media (max-width: 782px) {
     align-items: center;
     text-align: center;
   }
@@ -75,10 +82,21 @@
   font-size: 22px;
   margin-top: 18px;
 
+  @media (max-width: 782px) {
+    font-size: 18px;
+    text-align: center;
+  }
+
   @media (max-width: 767px) {
     width: 200px;
     font-size: 16px;
     font-weight: 400;
+  }
+
+  &_bt {
+    @media (max-width: 782px) {
+      text-align: center;
+    }
   }
 }
 
@@ -140,7 +158,13 @@
 .m_headerWrapper {
   @extend .headerWrapper;
   position:absolute;
-  font-size: 38px;
+  font-size: 40px;
+}
+
+.m_headerWrapper > h1 {
+  @media(max-width: 767px) {
+    font-size: 38px;
+  }
 }
 
 // Banner-Bottom.jsx
@@ -150,7 +174,7 @@
   height: 540px;
  
   @media(max-width: 767px) {
-    height: 1000px;
+    height: 900px;
   }
 }
 
@@ -159,12 +183,29 @@
   height: 100%;
 }
 
+.bt_innerContainer > .headerContainer {
+  @media(max-width: 767px) {
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.bt_innerContainer > .headerContainer > .headerWrapper {
+  @media(max-width: 767px) {
+    margin-top: 40px;
+  }
+}
+
 .bt_goBtn {
   @extend .goBtn;
   background-color: var(--color-white);
   color: var(--primary);
   width: 200px;
   margin-top: 16px;
+
+  @media (max-width: 782px) {
+    width: 500px;
+  }
 }
 
 .bt_description {
@@ -173,7 +214,7 @@
   padding: 28px 0 0 4px;
   
   @media(max-width: 767px) {
-    width: 270px;
+    width: 293px;
     padding: 24px 0 0 0;
     margin: 0 auto;
   }

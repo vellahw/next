@@ -2,6 +2,16 @@
 
 .container {
   @extend %basic_container;
+  height: 690px;
+
+  @media (max-width: 1048px) {
+    height: 900px;
+  }
+
+  @media (max-width: 767px) {
+    height: 760px;
+  }
+  
 }
 
 .title {
@@ -19,7 +29,7 @@
   display: flex;
   position: relative;
   
-  @media (max-width: 767px) {
+  @media (max-width: 1048px) {
     padding: 0;
     flex-direction: column;
     width: 100%;
@@ -33,26 +43,42 @@
   padding: 32px 32px 18px 32px;
   border-radius: 18px;
   
-  @media (max-width: 767px) {
+  @media (max-width: 1048px) {
     position: absolute;
-    width: calc(100% - 48px);
+    width: calc(100% - 124px);
     height: auto;
     padding: 24px 24px 10px 24px;
+    margin-left: 70px;
   }
-}
-  
-.cr {
-  background-color: #E7EBFA;
-  height: auto;
-  position: absolute;
-  top: 70px;
-  left: 552px;
-  
+
+  @media (max-width: 1025px) {
+    margin-left: 0;
+    width: calc(100% - 34px);
+  }
+
   @media (max-width: 767px) {
-    top: 264px;
-    left: 0;
-    height: 236px;
-    padding-bottom: 24px;
+    margin-left: 0;
+    width: calc(100% - 48px);
+  }
+  
+  &_right {
+    @extend .card;
+    background-color: #E7EBFA;
+    height: auto;
+    position: absolute;
+    top: 70px;
+    left: 552px;
+    
+    @media (max-width: 1048px) {
+      top: 288px;
+      left: 0;
+      height: 236px;
+      padding-bottom: 24px;
+    }
+
+    @media (max-width: 767px) {
+      top: 254px;
+    }
   }
 }
   
@@ -66,7 +92,6 @@
   }
 }
 
-  
 .cardDescription {
   font-size: 22px;
   line-height: 36px;
@@ -85,15 +110,84 @@
   justify-content: right;
   flex-wrap: wrap;
   margin-top: 32px;
+  float: right;
   
   @media (max-width: 767px) {
     justify-content: normal;
   }
+
+  &_right {
+    @extend .logoWrapper;
+    width: 294px;
+
+    @media (max-width: 1048px) {
+      width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      width: 294px;
+      float: none;
+    }
+  }
 }
+
+.partners {
+  width: auto;
+  height: 34px;
+  padding: 0 0 14px 24px;
+
+  &_hana {
+    width: auto;
+    height: 34px;
+    padding: 0 6px 14px 0;
+  }
+
+  &_fp {
+    padding: 0 8px 14px 24px;
+    width: auto;
+    height: 34px;
+  }
+
+  &_kakao {
+    width: auto;
+    height: 25px;
+    padding: 2px 4px 14px 16px;
+  }
+
+  &_bottom {
+    width: auto;
+    height: 34px;
+    padding: 0 0 14px 22px;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 0;
+    padding-right: 25px;
+
+    &_right {
+      padding: 0 25px 16px 0;
+      width: auto;
+      height: 33px;
+    }
+
+    &_hana {
+      padding: 0 24px 14px 0;
+    }
   
-.lr {
-  width: 294px;
-  float: right;
+    &_fp {
+      padding: 0 19px 14px 0;
+    }
+
+    &_kakao {
+      width: auto;
+      height: 24px;
+      padding: 4px 2px 14px 0;
+    }
+
+    &_bottom {
+      padding: 0 15px 14px 17px;
+    }
+  }
 }
   
 /* Info-Corp.jsx */
@@ -107,6 +201,10 @@
   @extend .header;
   font-size: 22px;
   line-height: 36px;
+
+  @media (max-width: 782px) {
+    width: 540px;
+  }
 }
 
 .btnWrap {
@@ -114,9 +212,19 @@
   align-items: center;
   margin: 32px 0 0 80px;
   
+  @media (max-width: 1025px) {
+    margin: 32px 0;
+  }
+
   @media (max-width: 767px) {
     flex-direction: column-reverse;
     align-items: start;
+  }
+}
+
+.btnWrap > a {
+  @media (max-width: 767px) {
+    width: 100%;
   }
 }
 
@@ -134,9 +242,8 @@
   
   @media (max-width: 767px) {
     display: block;
-    bottom: 10px;
-    width: 100%;
     margin: 32px 0 0 0;
+    width: 100%;
   }
 }
   

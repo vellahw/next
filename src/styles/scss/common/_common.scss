@@ -7,15 +7,10 @@
   @media (max-width: 767px) {
     padding: 80px 0 80px 0;
     position: relative;
-    height: 760px;
-  }
-    
-  @media (max-width: 1049px) {
   }
 }
 
 %basic_container {
-  height: 690px;
   max-width: 992px;
   margin: 0 auto;
   padding: 100px 16px 0 16px;
@@ -39,7 +34,11 @@
   
   @media (max-width: 767px) {
     margin: 0;
-    padding-top: 10px;
+    padding-top: 24px;
+  }
+
+  @media (max-width: 1025px) {
+    margin: 24px 0;
   }
 }
   

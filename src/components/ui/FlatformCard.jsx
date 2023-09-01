@@ -1,5 +1,5 @@
 import Image from "next/image"
-import style from '../styles/css/flatform-info.module.css'
+import style from '../../styles/css/flatform-info.module.css'
 
 export function FlatformCard(
     {title,
@@ -22,7 +22,7 @@ export function FlatformCard(
             <Image
               className={
                 isChange ? 
-                style.cardImg_tax : style.cardImg_sub
+                style.cardImg_tax : style.cardImg_phone
                 } 
               src={src}
               alt={'카드 이미지'}>

@@ -4,13 +4,14 @@ import cardImg_tax from '/public/images/bg-tax.png'
 import cardImg_re from '/public/images/bg-revenue.png'
 import style from '../../styles/css/flatform-info.module.css'
 import { SectionHeader } from '../../components/SectionHeader'
-import { FlatformCard } from '../../components/FlatformCard'
+import { FlatformCard } from "../../components/ui/FlatformCard"
 
 function FlatformInfo() {
     return(
       <section className={style.infoContainer_f}>
         <SectionHeader 
           title={'플랫폼 소개'}
+          isFlat={0}
           header1={'상업용 부동산 투자,'}
           header2={'직투에서 쉽고 간편하게.'}
         />

@@ -1,8 +1,9 @@
 'use client';
 
 import style from '../../styles/css/info.module.css'
-import Button from '@/components/Button'
+import Button from '@/components/ui/Button'
 import { SectionHeader } from '../../components/SectionHeader';
+import Link from 'next/link';
 
 function CorpInfo() {
   return (
@@ -15,12 +16,12 @@ function CorpInfo() {
       />
       
       <div className={style.btnWrap}>
-        <a href='mailto:"support@ziktu.com"'>
+        <Link href='mailto:"support@ziktu.com"'>
           <Button
             className={style.helpBtn}
             title='문의하기'
           />
-        </a>
+        </Link>
         <a href='https://static.kr.kasa.exchange/corp/%EB%B2%95%EC%9D%B8%EC%83%81%ED%92%88%EC%84%A4%EB%AA%85%EC%84%9C.pdf' target="_blank" rel="noreferrer">
           <p className={style.downloadText}>법인 상품설명서 다운로드</p>
         </a>

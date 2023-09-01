@@ -5,6 +5,13 @@ $second_bg: #494F66;
   @extend %basic_container;
   height: 1000px;
   padding-bottom: 100px;
+
+  @media(max-width: 1025px) {
+    height: 2180px;
+  }
+
+  @media screen and (max-width:1049px) {
+  }
 }
 
 .cardWrap {
@@ -13,7 +20,7 @@ $second_bg: #494F66;
   display: flex;
   position: relative;
 
-  @media(max-width: 767px) {
+  @media(max-width: 1025px) {
     padding: 0;
     flex-direction: column;
     width: 100%;
@@ -21,21 +28,30 @@ $second_bg: #494F66;
 }
 
 .shif {
-    position: absolute;
-    top: 318px;
-    left: 385px;
+  position: absolute;
+  top: 318px;
+  left: 385px;
 
+  @media(max-width: 1025px) {
+    top: 870px;
+    left: 0;
+    width: 100%;
+  }
 }
 
 .shif_last {
-    @extend .shif;
-    left: 691px;
+  @extend .shif;
+  left: 691px;
+  
+  @media(max-width: 1025px) {
+    left: 0;
+    top: 1328px;
+  }
 }
 
 @mixin card-basic($bg-color:#E7EBFA, $width: 225px, $hegith:430px) {
   position: absolute;
   background-color: $bg-color;
-  overflow-y: hidden;
   width: $width;
   height: $hegith;
   padding: 30px;
@@ -43,7 +59,7 @@ $second_bg: #494F66;
   margin-right: 15px;
   @content;
 
-  @media(max-width: 767px) {
+  @media(max-width: 1025px) {
     position: relative;
     width: calc(100% - 48px);
     height: 415px;
@@ -62,7 +78,17 @@ $second_bg: #494F66;
   @include card-basic($second_bg){
     width: 532px;
     height: 210px;
-    right: 0;
+    left: 386px;
+    
+    @media screen and (max-width:1025px) {
+      width: auto;
+      height: 368px;
+      left: 0;
+    }
+    
+    @media screen and (max-width:1049px) {
+      margin-right: 0;
+    }
   };
 }
 
@@ -73,6 +99,12 @@ $second_bg: #494F66;
   top: 538px;
   left: 80px;
   }
+
+  @media(max-width: 1025px) {
+    left: 0;
+    top: 918px;
+    width: auto;
+  }
 }
 
 .cardTitle {
@@ -82,7 +114,7 @@ $second_bg: #494F66;
   font-size: 22px;
   font-weight: 600;
 
-  @media(max-width: 767px) {
+  @media(max-width: 1025px) {
     width: 120px;
     line-height: 28px;
     margin-bottom: 22px;
@@ -98,7 +130,7 @@ $second_bg: #494F66;
 }
 
 .imgContainer {
-  @media(max-width: 767px) {
+  @media(max-width: 1025px) {
     display: flex;
     justify-content: center;
     height: auto;
@@ -106,18 +138,32 @@ $second_bg: #494F66;
   }
 }
 
-.cardImg_sub {
+.cardImg_phone {
   position: absolute;
   width: 100%;
   height: auto;
   left: 0;
   bottom: 0;
+
+  @media(max-width: 1025px) {
+    width: 288px;
+    transform: translateX(-50%);
+    left: 50%;
+  }
 }
 
 .cardImg_tax {
   width: 220px;
   height: auto;
   float: right;
+
+  @media screen and (max-width:1025px) {
+    float: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25px;
+  }
 }
 
 .cardImg_re {
@@ -126,4 +172,5 @@ $second_bg: #494F66;
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 15px;
 }
