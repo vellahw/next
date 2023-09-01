@@ -5,18 +5,16 @@ import Image from "next/image"
 import { usePathname } from 'next/navigation'
 import { AiOutlineMenu } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
-import {React, useEffect} from 'react';
-import { useRecoilState } from 'recoil';
-import { whiteNav, sideNavOpen, isScroll } from "./atom";
+import {React, useState, useEffect} from 'react';
 import style from '../styles/css/header.module.css'
 import logo from '/public/logos/ziktu-logo.png'
 import SideNav from "./SideNav";
 import { NavMenuItem } from "./NavMenuItem";
 
 function Header() {
-  const [isWhiteNav] = useRecoilState(whiteNav);
-  const [isSideNavOpen, setIsSideNavOpen] = useRecoilState(sideNavOpen);
-  const [scrollPosition, setScrollPosition] = useRecoilState(isScroll);
+  const [isWhiteNav] = useState();
+  const [isSideNavOpen, setIsSideNavOpen] = useState();
+  const [scrollPosition, setScrollPosition] = useState();
   const pathname = usePathname()
 
   const openMenu = () => {

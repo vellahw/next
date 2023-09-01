@@ -2,15 +2,13 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {React, useState} from 'react'
-import { useRecoilState } from 'recoil'
-import { whiteNav, sideNavOpen, isScroll } from "./atom"
 import Button from './Button'
 import style from '../styles/css/header.module.css'
 
 export function NavMenuItem() {
-  const [scrollPosition, setScrollPosition] = useRecoilState(isScroll)
-  const [isWhiteNav, setIsWhiteNav] = useRecoilState(whiteNav)
-  const [isNavOpen, setIsNavOpen] = useRecoilState(sideNavOpen)
+  const [scrollPosition, setScrollPosition] = useState()
+  const [isWhiteNav, setIsWhiteNav] = useState()
+  const [isNavOpen, setIsNavOpen] = useState()
   const [isClick, setIsClick] = useState(false)
   const pathname = usePathname()
 

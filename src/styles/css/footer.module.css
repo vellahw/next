@@ -45,6 +45,7 @@
 
 .footer {
   background-color: #f6f6f9;
+  padding: 0;
 }
 @media (max-width: 767px) {
   .footer {
@@ -95,6 +96,24 @@
   display: inline;
 }
 
+.line, .line_last, .line_se {
+  width: 1px;
+  height: 15px;
+  background-color: #AFB0B6;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 12px;
+}
+@media (max-width: 767px) {
+  .line, .line_last, .line_se {
+    display: none;
+  }
+}
+
+.line_se {
+  display: inline-block;
+}
+
 .copy {
   font-weight: normal;
   color: #414551;
@@ -106,6 +125,7 @@
   color: #414551;
   font-weight: 600;
   padding-top: 20px;
+  padding-bottom: 4px;
 }
 
 .link {
@@ -139,6 +159,29 @@
   right: 38px;
 }
 
+.snsLink, .snsLink_fb {
+  margin: 0 12px 0 12px;
+}
+
+.snsLink_fb {
+  margin-left: 0;
+}
+
+.snsLogo, .snsLogo_youtb, .snsLogo_blog {
+  font-size: 32px;
+  color: #373B41;
+}
+
+.snsLogo_blog {
+  width: 36px;
+}
+
+.snsLogo_youtb {
+  font-size: 38px;
+  bottom: 4px;
+  position: absolute;
+}
+
 .authWrap {
   margin-top: 48px;
   display: flex;
@@ -166,4 +209,10 @@
 
 .authLogo {
   margin-right: 16px;
+}
+
+.line_last {
+  height: 32px;
+  margin-left: 20px;
+  margin-right: 20px;
 }

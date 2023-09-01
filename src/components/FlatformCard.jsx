@@ -19,7 +19,14 @@ export function FlatformCard(
             }>
                 {title}
             </p>
-            <Image className={style.cardSubImg} src={src} alt={'카드 이미지'} ></Image>
+            <Image
+              className={
+                isChange ? 
+                style.cardImg_tax : style.cardImg_sub
+                } 
+              src={src}
+              alt={'카드 이미지'}>
+            </Image>
           </div>
     )
 }

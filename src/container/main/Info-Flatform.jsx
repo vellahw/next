@@ -1,5 +1,7 @@
 import Image from "next/image"
-import cardImg from '/public/images/bg-sub.png'
+import cardImg_sub from '/public/images/bg-sub.png'
+import cardImg_tax from '/public/images/bg-tax.png'
+import cardImg_re from '/public/images/bg-revenue.png'
 import style from '../../styles/css/flatform-info.module.css'
 import { SectionHeader } from '../../components/SectionHeader'
 import { FlatformCard } from '../../components/FlatformCard'
@@ -16,11 +18,11 @@ function FlatformInfo() {
         <div className={style.cardWrap}>
           <FlatformCard 
             title={'선착순 공모로 쉽고 빠르게 청약'}
-            src={cardImg}
+            src={cardImg_sub}
           />
           <FlatformCard 
             title={'부동산 세금 걱정없는 투자'}
-            src={''}
+            src={cardImg_tax}
             change={1}
           />
 
@@ -28,19 +30,19 @@ function FlatformInfo() {
             <p className={style.cardTitle_white}>
             건물 매각에 따른 투자수익까지
             </p>
-            <Image className={style.cardSubImg} src={''} alt={'카드 이미지'} ></Image>
+            <Image className={style.cardImg_re}  src={cardImg_re} alt={'카드 이미지'} ></Image>
           </div>
 
           <div className={style.shif}>
             <FlatformCard 
                 title={'3개월마다 받는 임대배당수익'}
-                src={cardImg}
+                src={cardImg_sub}
             />
           </div>
           <div className={style.shif_last}>
             <FlatformCard 
                 title={'건물 지분을 주식처럼 거래'}
-                src={cardImg}
+                src={cardImg_sub}
             />
           </div>
         </div>        

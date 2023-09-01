@@ -27,3 +27,8 @@ ul li {
 button {
   cursor: pointer;
 }
+
+address {
+  text-decoration: none;
+  font-style: normal;
+}

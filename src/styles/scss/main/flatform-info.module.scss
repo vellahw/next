@@ -93,6 +93,8 @@ $second_bg: #494F66;
 .cardTitle_white {
   @extend .cardTitle;
   color: #fff;
+  position: absolute;
+  z-index: 1;
 }
 
 .imgContainer {
@@ -104,10 +106,24 @@ $second_bg: #494F66;
   }
 }
 
-.cardSubImg {
+.cardImg_sub {
   position: absolute;
   width: 100%;
   height: auto;
   left: 0;
   bottom: 0;
+}
+
+.cardImg_tax {
+  width: 220px;
+  height: auto;
+  float: right;
+}
+
+.cardImg_re {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
