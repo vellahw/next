@@ -14,9 +14,10 @@ import { NavMenuItem } from "./NavMenuItem";
 
 function Header() {
   const [isWhiteNav] = useState();
-  const [isSideNavOpen, setIsSideNavOpen] = useState();
+  const [isSideNavOpen, setIsSideNavOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState();
   const pathname = usePathname()
+  const isActive = pathname != '/'
 
   const openMenu = () => {
     setIsSideNavOpen(true);
@@ -44,11 +45,11 @@ function Header() {
   // }, []);
 
   return (
-    <nav className={pathname != '/' ?
+    <nav className={isActive ?
          style.navWrap_white : style.navWrap
          }
     >
-      <SideNav sideNavOpen={!isSideNavOpen} />
+      <SideNav sideNavOpen={isSideNavOpen} />
 
       <div className={style.navWrapper}>
         <div className={style.navbar}>
@@ -57,7 +58,7 @@ function Header() {
             <Image
                   className={style.logo }
                   src={
-                    pathname != '/' ?
+                    isActive ?
                     logo : logo_white
                   }
                   alt="헤더로고"

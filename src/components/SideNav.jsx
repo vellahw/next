@@ -5,7 +5,7 @@ function SideNav(props) {
   return(
     <>
       <div className={ props.sideNavOpen ? 
-        style.sideNav : style.sideNav_open}
+        style.sideNav_open : style.sideNav}
       >
         <ul className={style.navItemList_side}>
           <NavMenuItem />
@@ -13,7 +13,7 @@ function SideNav(props) {
       </div>
 
       <div className={ props.sideNavOpen ?
-        style.overlay_none : style.overlay } />
+        style.overlay : style.overlay_none } />
     </>
   )
 }

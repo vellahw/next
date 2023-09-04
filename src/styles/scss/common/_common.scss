@@ -53,3 +53,15 @@
     line-height: 30px;
   }
 } 
+
+%basic_button {
+  background-color: var(--primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 600;
+  width: 168px;
+  height: 48px;
+  margin-top: 32px;
+}

@@ -59,13 +59,13 @@
   font-size: 20px;
   color: var(--color-white);
 }
-@media (max-width: 782px) {
+@media (max-width: 767px) {
   .iconWrapper {
     display: block;
   }
 }
 
-@media screen and (max-width: 782px) {
+@media screen and (max-width: 767px) {
   .navItemWrapper {
     display: none;
   }
@@ -99,14 +99,9 @@
   width: 138px;
   height: 40px;
 }
-@media screen and (max-width: 782px) {
-  .appDownbtn, .appDownbtn_change {
-    display: none;
-  }
-}
 @media screen and (max-width: 767px) {
   .appDownbtn, .appDownbtn_change {
-    border: none;
+    display: none;
   }
 }
 

@@ -1,3 +1,5 @@
+import { BuildingList } from "../../../container/building/BuildingList"
+
 export const metadata = {
   title: '직투 - 빌딩 정보',
   description: '빌딩 정보 페이지',
@@ -11,7 +13,7 @@ export const metadata = {
 export default function BuildingPage() {
     return (
       <>
-        <h1>빌딩 페이지</h1>
+        <BuildingList />
       </>
     )
   }

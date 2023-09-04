@@ -1,25 +1,105 @@
 {
-    "news" : [
-        {
-        "no": 1,
-        "title": "공모 재시동 직투코리아, 대신그룹과 시너지 노린다",
-        "press": "더벨",
-        "date": "2023년 08월 16일",
-        "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202308071738340960104714"
-        },
-        {
-        "no": 2,
-        "title": "7억 미술품부터 160억 건물까지… 내달 ‘조각투자’ 큰 장 열린다",
-        "press": "국민일보",
-        "date": "2023년 08월 10일",
-        "url": "https://news.kmib.co.kr/article/view.asp?arcid=0018562634&code=61141211&cp=nv"
-        },
-        {
-        "no": 3,
-        "title": "직투, 7번째 공모건물 ‘압구정 커머스 빌딩’ 공개",
-        "press": "매일경제",
-        "date": "2023년 07월 16일",
-        "url": "https://mirakle.mk.co.kr/view.php?year=2023&no=614269"
-        }
-    ]
+  "menuItems" : [
+    {
+      "no": 1,
+      "title": "직투 소식",
+      "item": "news",
+      "path": "/news"
+    },
+    {
+      "no": 2,
+      "title": "빌딩 정보",
+      "item": "building",
+      "path": "/building"
+    },
+    {
+      "no": 3,
+      "title": "공시",
+      "item": "disclosure",
+      "path": "/disclosure"
+    },
+    {
+      "no": 4,
+      "title": "이벤트",
+      "item": "event",
+      "path": "/event"
+    },
+    {
+      "no": 5,
+      "title": "채용",
+      "item": "recruit",
+      "path": "/recruit"
+    },
+    {
+      "no": 6,
+      "title": "FAQ",
+      "item": "faq",
+      "path": "/faq"
+    }
+  ],
+  "news" : [
+    {
+    "no": 1,
+    "title": "공모 재시동 직투코리아, 대신그룹과 시너지 노린다",
+    "press": "더벨",
+    "date": "2023년 08월 16일",
+    "url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202308071738340960104714"
+    },
+    {
+    "no": 2,
+    "title": "7억 미술품부터 160억 건물까지… 내달 ‘조각투자’ 큰 장 열린다",
+    "press": "국민일보",
+    "date": "2023년 08월 10일",
+    "url": "https://news.kmib.co.kr/article/view.asp?arcid=0018562634&code=61141211&cp=nv"
+    },
+    {
+    "no": 3,
+    "title": "직투, 7번째 공모건물 ‘압구정 커머스 빌딩’ 공개",
+    "press": "매일경제",
+    "date": "2023년 07월 16일",
+    "url": "https://mirakle.mk.co.kr/view.php?year=2023&no=614269"
+    }
+  ],
+    "buildings" : [
+    {
+      "no": 1,
+      "src": "/images/buildings/commerce.png",
+      "type": "공모예정",
+      "name": "압구정커머스빌딩",
+      "address": "서울 강남구 도산대로51길 14(신사동)",
+      "date": "2023.09.06 ~ 2023.09.08",
+      "totalPrice": "167억원",
+      "price": "5,000원"
+    },
+    {
+      "no": 2,
+      "src": "/images/buildings/te.png",
+      "type": "상장",
+      "name": "TE물류센터",
+      "address": "충남 천안시 동남구 병천면 가전리 266-3",
+      "publicDate": "2023.06.29",
+      "dividendDate": "2023.10.29"
+    },
+    {
+      "no": 3,
+      "src": "/images/buildings/hk.png",
+      "type": "매각완료",
+      "name": "역삼 한국기술센터",
+      "address": "서울 강남구 역삼동 701-7",
+      "date": "2021.09.08 ~ 21.09.17",
+      "publicDate": "2021.09.30",
+      "saleDate": "2022.05.30",
+      "totalPrice": "84.5억원",
+      "salePrice": "93억원"
+    },
+    {
+      "no": 4,
+      "src": "/images/buildings/lelit.png",
+      "type": "상장",
+      "name": "부티크호텔 르릿",
+      "address": "서울 중구 광희동2가 228",
+      "publicDate": "2022.04.29",
+      "dividendDate": "2023.09.29"
+    }
+  ]
 }

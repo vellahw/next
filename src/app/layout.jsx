@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import '../styles/css/variable.css';
@@ -12,7 +13,7 @@ export const metadata = {
   }
 }
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
   return (
       <html lang="ko">
         <body>

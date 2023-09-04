@@ -229,14 +229,8 @@
 }
 
 .helpBtn {
-  background-color: var(--primary);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 20px;
-  font-weight: 600;
+  @extend %basic_button;
   width: 107px;
-  height: 48px;
   margin-top: 0;
   margin-right: 30px;
   
