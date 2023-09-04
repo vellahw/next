@@ -15,8 +15,8 @@ export function BuildingList() {
         <div className={style.infoContainer}>
           { buildings.map(i=>{
             return(
-              <Link href={`/building/${i.no}`}>  
-                <div className={style.infoWrapper} key={i.no}>
+              <Link href={`/building/${i.no}`} key={i.no}>  
+                <div className={style.infoWrapper}>
                     <div className={style.imgContainer}>
                     <Image 
                         className={style.thumnail}
