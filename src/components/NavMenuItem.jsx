@@ -33,7 +33,6 @@ export function NavMenuItem() {
           <Link
             href={i.path}
             key={i.no}
-            // onClick={() => handleItemClick(i.item)}
             className={isActive ? style.colorChange : ''}
           >
             <li className={style.navItem}>
