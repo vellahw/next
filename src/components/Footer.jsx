@@ -78,9 +78,9 @@ function Footer() {
             </span>
           </div>
           <div className={style.line_last}></div>
-          <div className={style.auth}>
+          <div className={style.auth_sw}>
             <Image src={sw} alt='sw 로고' className={style.authLogo}></Image>
-            <span className={style.text}>
+            <span className={style.text_sw}>
               개인정보보호배상책임공제<br/>
               가입 인증
             </span>

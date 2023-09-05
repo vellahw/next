@@ -52,7 +52,7 @@
   .footer {
     margin-top: 0;
     font-size: 14px;
-    height: 600px;
+    height: 680px;
   }
 }
 
@@ -143,14 +143,19 @@
   margin-bottom: 5px;
 }
 
-.text {
+.text, .text_sw {
   margin-right: 12px;
   font-weight: normal;
   color: #414551;
 }
 @media (max-width: 767px) {
-  .text {
+  .text, .text_sw {
     padding-bottom: 3px;
+  }
+}
+@media (max-width: 767px) {
+  .text_sw {
+    margin-left: 11px;
   }
 }
 
@@ -159,6 +164,12 @@
   position: absolute;
   top: 53px;
   right: 38px;
+}
+@media screen and (max-width: 767px) {
+  .snsWrap {
+    position: static;
+    margin-top: 24px;
+  }
 }
 
 .snsLink, .snsLink_fb {
@@ -183,6 +194,11 @@
   bottom: 4px;
   position: absolute;
 }
+@media screen and (max-width: 767px) {
+  .snsLogo_youtb {
+    position: relative;
+  }
+}
 
 .authWrap {
   margin-top: 48px;
@@ -191,21 +207,24 @@
 @media (max-width: 767px) {
   .authWrap {
     flex-direction: column;
-  }
-  .authWrap .sw-area {
-    margin-left: 11px;
+    margin-top: 20px;
   }
 }
 
-.auth {
+.auth, .auth_sw {
   display: flex;
   align-items: center;
   font-size: 14px;
 }
 @media (max-width: 767px) {
-  .auth {
+  .auth, .auth_sw {
     font-size: 12px;
     margin-top: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .auth_sw {
+    margin-left: 11px;
   }
 }
 
