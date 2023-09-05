@@ -1,13 +1,16 @@
 'use client'
 import Image from 'next/image'
-import {MdLocationOn} from 'react-icons/md';
+import Link from 'next/link';
 import style from '../../styles/css/list.module.css'
 import data from '/public/data.json'
-import StatusUi from 'src/components/ui/BuildingStatus';
-import Link from 'next/link';
+import BuildingDetailInfo from '../../components/ui/BuildingDetailInfo';
 
 export function BuildingList() {
   const buildings = data.buildings
+
+  const goDetail = ()=> {
+    alert('상세페이지로 이동')
+  }
 
   return(
     <section className={style.container}>
@@ -27,29 +30,8 @@ export function BuildingList() {
                         >
                     </Image>
                     </div>
-                    <div className={style.innerInfoWrapper}>
-                    <div className={style.statusContainer}>
-                        <div className={style.status} status={i.type}>
-                        {
-                            {
-                            '공모예정': '공모 예정',
-                            '상장': '상장',
-                            '매각완료': '매각 완료'
-                            }[i.type]
-                        }
-                        </div>
-                    </div>  
-                    <div>
-                        <h1 className={style.buildingName}>{i.name}</h1>
-                        <address className={style.buildingAddress}>
-                            <MdLocationOn className={style.locationIcon} />
-                            {i.address}
-                        </address>
-                        <div className={style.detailOptionWrapper}>
-                            <StatusUi data={i} />
-                        </div>
-                    </div>
-                    </div>
+
+                    <BuildingDetailInfo data={i} />
                 </div>
               </Link>
             )
@@ -59,10 +41,10 @@ export function BuildingList() {
         <div className={style.helpContainer}>
           <h2 className={style.helpHeader}>거래 방법 알아보기</h2>
           <div className={style.cardWrapper}>
-            <div className={style.leftCard}>
+            <div className={style.leftCard} onClick={goDetail}>
               <div className={style.cardTitle}>DABS 거래는 <br /> 어떻게 하는건가요?</div>
             </div>
-            <div className={style.rightCard}>
+            <div className={style.rightCard} onClick={goDetail}>
               <div className={style.cardTitle}>왜 직투에서 <br /> 거래해야 할까요?</div>
             </div>
           </div>

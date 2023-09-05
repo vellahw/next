@@ -65,3 +65,22 @@
   height: 48px;
   margin-top: 32px;
 }
+
+%list_container {
+  @extend %basic_container;
+  padding: 130px 0 80px 0;
+  height: auto;
+}
+
+%list_header {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 80px;
+
+  @media screen and (max-width: 767px) {
+    padding: 0;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

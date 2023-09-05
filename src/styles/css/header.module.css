@@ -2,14 +2,7 @@
   min-width: 360px;
 }
 
-.navWrap_white {
-  background-color: #fff;
-  color: var(--color-black);
-  border-bottom: 1px solid #E8E8EC;
-  transition: background-color 0.2s linear 0s;
-}
-
-.navWrapper {
+.navWrapper, .navWrapper_white {
   display: flex;
   align-items: center;
   min-width: 360px;
@@ -20,16 +13,20 @@
   transition: background-color 0.2s linear 0s;
 }
 @media screen and (max-width: 767px) {
-  .navWrapper {
+  .navWrapper, .navWrapper_white {
     width: 100vw;
     max-width: 100%;
     height: 56px;
   }
 }
 @media screen and (max-width: 782px) {
-  .navWrapper {
+  .navWrapper, .navWrapper_white {
     transition: none;
   }
+}
+.navWrapper_white {
+  background-color: var(--color-white);
+  border-bottom: 1px solid #E8E8EC;
 }
 
 .navbar {
@@ -38,7 +35,7 @@
   padding: 0 16px;
   width: 100%;
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 3px auto;
   height: 100%;
   justify-content: space-between;
 }

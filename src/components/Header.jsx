@@ -45,13 +45,18 @@ function Header() {
   // }, []);
 
   return (
-    <nav className={isActive ?
-         style.navWrap_white : style.navWrap
-         }
-    >
+    <nav className={
+      isActive
+      ? style.navWrap_white
+      : style.navWrap
+    }>
       <SideNav sideNavOpen={isSideNavOpen} />
 
-      <div className={style.navWrapper}>
+      <div className={
+        isActive
+        ? style.navWrapper_white
+        : style.navWrapper
+      }>
         <div className={style.navbar}>
 
           <Link href='/'>

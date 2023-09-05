@@ -1,3 +1,4 @@
+import EventList from "../../../container/event/EventList"
 
 export const metadata = {
   title: '직투 - 이벤트 목록',
@@ -10,8 +11,6 @@ export const metadata = {
 
 export default function EventPage() {
     return (
-      <>
-        <h1>이벤트 페이지</h1>
-      </>
+      <EventList />
     )
   }

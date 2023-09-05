@@ -1,4 +1,5 @@
 import data from '/public/data.json'
+import BuildingDetailPage from '../../../../container/building/BuildingDetailPage'
 
 export const metadata = {
     title: '직투 - 빌딩 정보',
@@ -13,7 +14,7 @@ export const metadata = {
 export default function DetailPage() {
     return(
         <>
-            <h1>상세보기`~</h1>
+            <BuildingDetailPage />
         </>
     )
 }
