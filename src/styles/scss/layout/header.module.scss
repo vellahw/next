@@ -1,0 +1,150 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.navWrap {
+  min-width: 360px;
+}
+
+// .navWrap_white {
+//   color: var(--color-black);
+//   transition: background-color 0.2s linear 0s;
+// }
+
+.navWrapper {
+  @include flex-center;
+  min-width: 360px;
+  width: 100vw;
+  height: 64px;
+  position: fixed;
+  z-index: 999;
+  transition: background-color 0.2s linear 0s;
+  
+  @media screen and (max-width: 767px) {
+    width: 100vw;
+    max-width:100%;
+    height: 56px;
+  }
+
+  @media screen and (max-width: 782px) {
+    transition: none;
+  }
+
+  &_white {
+    @extend .navWrapper;
+    background-color: var(--color-white);
+    border-bottom: 1px solid #E8E8EC;
+  }
+}
+
+.navbar {
+  @include flex-center;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 1024px;
+  margin: 3px auto;
+  height: 100%;
+  justify-content: space-between;
+
+  @media screen and (min-width: 767px) {
+    margin-top: 4px;
+  }
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  padding: 10px;
+  padding-left: 0;
+
+  @media(min-width: 767px) {
+  }
+}
+
+.iconWrapper {
+  display: none;
+  font-size: 20px;
+  color: var(--color-white);
+
+  @media(max-width: 767px) {
+    display: block;
+  }
+}
+
+
+.navItemWrapper {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.navItemList {
+  @include flex-center;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+
+  &_side {
+    padding: 0;
+  }
+}
+
+.navItem {
+  cursor: pointer;
+  margin: 0 4px;
+  padding: 12px;
+  font-weight: 500; 
+}
+
+.appDownbtn {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 138px;
+  height: 40px;
+    
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.appDownbtn_change {
+  @extend .appDownbtn;
+  background-color: var(--primary);
+}
+
+// SideNav.jsx
+.sideNav {
+  display: none;
+  
+  &_open {
+    @include flex-center;
+    background-color: #fff;
+    width: 100%;
+    height: 304px;
+    padding-left: 16px;
+    z-index: 999;
+    position: fixed;
+    top: 57px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  opacity: 0.4;
+  background-color: rgb(0, 0, 0);
+  z-index: 5;
+
+  &_none {
+    display: none;
+  }
+}
+
+.colorChange {
+  color: var(--primary);
+}

@@ -1,0 +1,250 @@
+@use '../common/common';
+
+.container {
+  @extend %basic_container;
+  height: 690px;
+
+  @media (max-width: 1048px) {
+    height: 900px;
+  }
+
+  @media (max-width: 767px) {
+    height: 760px;
+  }
+  
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.header {
+  @extend %basic_header;
+}
+
+.cardWrapper {
+  margin-top: 40px;
+  padding: 28px 0 0 80px;
+  display: flex;
+  position: relative;
+  
+  @media (max-width: 1048px) {
+    padding: 0;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+  
+.card {
+  background-color: #F6F6F9;
+  width: 384px;
+  height: auto;
+  padding: 32px 32px 18px 32px;
+  border-radius: 18px;
+  
+  @media (max-width: 1048px) {
+    position: absolute;
+    width: calc(100% - 124px);
+    height: auto;
+    padding: 24px 24px 10px 24px;
+    margin-left: 70px;
+  }
+
+  @media (max-width: 1025px) {
+    margin-left: 0;
+    width: calc(100% - 34px);
+  }
+
+  @media (max-width: 767px) {
+    margin-left: 0;
+    width: calc(100% - 48px);
+  }
+  
+  &_right {
+    @extend .card;
+    background-color: #E7EBFA;
+    height: auto;
+    position: absolute;
+    top: 70px;
+    left: 552px;
+    
+    @media (max-width: 1048px) {
+      top: 288px;
+      left: 0;
+      height: 236px;
+      padding-bottom: 24px;
+    }
+
+    @media (max-width: 767px) {
+      top: 254px;
+    }
+  }
+}
+  
+.cardTitle {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 14px;
+  
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
+}
+
+.cardDescription {
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 600;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.logoWrapper {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: right;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  float: right;
+  
+  @media (max-width: 767px) {
+    justify-content: normal;
+  }
+
+  &_right {
+    @extend .logoWrapper;
+    width: 294px;
+
+    @media (max-width: 1048px) {
+      width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      width: 294px;
+      float: none;
+    }
+  }
+}
+
+.partners {
+  width: auto;
+  height: 34px;
+  padding: 0 0 14px 24px;
+
+  &_hana {
+    width: auto;
+    height: 34px;
+    padding: 0 6px 14px 0;
+  }
+
+  &_fp {
+    padding: 0 8px 14px 24px;
+    width: auto;
+    height: 34px;
+  }
+
+  &_kakao {
+    width: auto;
+    height: 25px;
+    padding: 2px 4px 14px 16px;
+  }
+
+  &_bottom {
+    width: auto;
+    height: 34px;
+    padding: 0 0 14px 22px;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 0;
+    padding-right: 25px;
+
+    &_right {
+      padding: 0 25px 16px 0;
+      width: auto;
+      height: 33px;
+    }
+
+    &_hana {
+      padding: 0 24px 14px 0;
+    }
+  
+    &_fp {
+      padding: 0 19px 14px 0;
+    }
+
+    &_kakao {
+      width: auto;
+      height: 24px;
+      padding: 4px 2px 14px 0;
+    }
+
+    &_bottom {
+      padding: 0 15px 14px 17px;
+    }
+  }
+}
+  
+/* Info-Corp.jsx */
+.infoContainer_corp {
+  @extend %basic_container;
+  height: auto;
+  padding-bottom: 100px;
+}
+
+.header_corph {
+  @extend .header;
+  font-size: 22px;
+  line-height: 36px;
+
+  @media (max-width: 782px) {
+    width: 540px;
+  }
+}
+
+.btnWrap {
+  display: flex;
+  align-items: center;
+  margin: 32px 0 0 80px;
+  
+  @media (max-width: 1025px) {
+    margin: 32px 0;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+}
+
+.btnWrap > a {
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.helpBtn {
+  @extend %basic_button;
+  width: 107px;
+  margin-top: 0;
+  margin-right: 30px;
+  
+  @media (max-width: 767px) {
+    display: block;
+    margin: 32px 0 0 0;
+    width: 100%;
+  }
+}
+  
+.downloadText {
+  color: #A1A0A8;
+  text-decoration: underline;
+  font-weight: 600;
+  margin: 0;
+  cursor: pointer;
+}
