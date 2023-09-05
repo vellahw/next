@@ -1,7 +1,7 @@
 'use client';
 
 import style from '../../styles/css/banner.module.css'
-import Button from '@/components/ui/Button'
+import Button from '../../components/ui/Button';
 
 function BottomBanner() {
   const showQR = ()=>{

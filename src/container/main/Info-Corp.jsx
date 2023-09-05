@@ -1,7 +1,7 @@
 'use client';
 
 import style from '../../styles/css/info.module.css'
-import Button from '@/components/ui/Button'
+import Button from '../../components/ui/Button'
 import { SectionHeader } from '../../components/SectionHeader';
 import Link from 'next/link';
 

@@ -32,9 +32,6 @@
   }
 }
 
-.headerWrapper {
-  margin: 38px 0 0 80px;
-}
 @media (max-width: 767px) {
   .headerWrapper {
     margin: 0;
