@@ -15,7 +15,7 @@ import { NavMenuItem } from "./NavMenuItem";
 function Header() {
   const [isWhiteNav] = useState();
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState();
+  const [scrollPosition, setScrollPosition] = useState('');
   const pathname = usePathname()
   const isActive = pathname != '/'
 
@@ -30,30 +30,17 @@ function Header() {
   const handleScroll = () => {
     setScrollPosition(window.scrollY || document.documentElement.scrollTop);
   }
-    
-  // useEffect(() => { 
-  //   window.removeEventListener("scroll", handleScroll);
-  //   const timer = setInterval(() => {
-  //       window.addEventListener("scroll", handleScroll);
-  //   }, 100);
-        
-  //   return () => {
-  //       document.documentElement.scrollTo(0, 0)
-  //       clearInterval(timer);
-  //       window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
 
   return (
     <nav className={
-      isActive
+      isActive && scrollPosition < 100
       ? style.navWrap_white
       : style.navWrap
     }>
       <SideNav sideNavOpen={isSideNavOpen} />
 
       <div className={
-        isActive
+        isActive && scrollPosition < 100
         ? style.navWrapper_white
         : style.navWrapper
       }>
