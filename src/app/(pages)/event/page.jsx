@@ -1,4 +1,5 @@
 import EventList from "../../../container/event/EventList"
+import data from '/public/data.json'
 
 export const metadata = {
   title: '직투 - 이벤트 목록',
@@ -9,8 +10,9 @@ export const metadata = {
   },
 }
 
-export default function EventPage() {
+export default function EventPage(props) {
+  const event = data.events[0]
     return (
-      <EventList />
-    )
+      <EventList props={event} />
+      )
   }

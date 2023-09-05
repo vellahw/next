@@ -1,8 +1,9 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import data from '/public/data.json'
 import style from '../../styles/css/eventList.module.css' 
 
-function EventList() {
+function EventList(props) {
   const eventData = data.events
 
   return (
@@ -12,7 +13,8 @@ function EventList() {
   <ul className={style.list}>
     {eventData.map(i => {
       return (
-        <li className={style.item} key={i.no}>
+        <Link href={`/event/${i.no}`} key={i.no}>
+        <li className={style.item}>
           <div className={style.itemContainer}>
             <div className={style.thumnailContainer}>
                 <Image
@@ -37,6 +39,7 @@ function EventList() {
             </div>
           </div> 
         </li>
+        </Link>
       )
     })}
   </ul>

@@ -1,6 +1,6 @@
-function BuildingDetailPage({ content }) {
-    console.log(content)
-
+function BuildingDetailPage(props) {
+  console.log(props)
+  
     return(
         <section style={{height: '560px'}}>
             <h1 style={{paddingTop: '200px'}}>상세보기`~ {content}</h1>
