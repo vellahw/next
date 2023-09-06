@@ -14,7 +14,7 @@ function EventDetailPage() {
             <Image src={eventDetail.mainImg} width={300} height={200} alt='메인이미지'></Image>
             {eventDetail.detailImg ?
              <>
-              <Image src={eventDetail.detailImg} width={300} height={700}  alt='상세이미지'></Image>
+              <Image src={eventDetail.detailImg} width={300} height={700} alt='상세이미지' priority={true}></Image>
              </>
              :
              <>

@@ -9,7 +9,7 @@ $font-color: #414551;
   @media(max-width: 767px) {
     margin-top: 0;
     font-size: 14px;
-    height: 600px;
+    height: 680px;
   }
 }
 
@@ -109,13 +109,26 @@ $font-color: #414551;
   @media(max-width: 767px) {
     padding-bottom: 3px;
   }
+
+  &_sw {
+    @extend .text;
+    @media(max-width: 767px) {
+      margin-left: 11px;
+    }
+  }
 }
 
 .snsWrap {
   display: flex;
   position: absolute;
+  align-items: center;
   top:53px;
-  right: 38px;
+  right: 0;
+
+  @media screen and (max-width: 767px) {
+    position: static;
+    margin-top: 24px;
+  }
 }
 
 .snsLink {
@@ -132,17 +145,17 @@ $font-color: #414551;
   color: #373B41;
 }
 
-
 .snsLogo_blog {
   @extend .snsLogo;
   width: 36px;
+  height: auto
 }
 
 .snsLogo_youtb {
   @extend .snsLogo;
   font-size: 38px;
   bottom: 4px;
-  position: absolute;
+  position: static;
 }
 
 .authWrap {
@@ -151,10 +164,7 @@ $font-color: #414551;
 
   @media(max-width: 767px) {
     flex-direction: column;
-
-    .sw-area {
-      margin-left: 11px;
-    }
+    margin-top: 20px;
   }
 }
 
@@ -166,6 +176,13 @@ $font-color: #414551;
   @media(max-width: 767px) {
     font-size: 12px;
     margin-top: 16px;
+  }
+
+  &_sw {
+    @extend .auth;
+    @media(max-width: 767px) {
+      margin-left: 11px;
+    }
   }
 }
 
