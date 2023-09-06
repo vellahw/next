@@ -45,8 +45,9 @@
 }
 
 .footer {
-  background-color: #f6f6f9;
+  background-color: var(--color-gray1);
   padding: 0;
+  position: relative;
 }
 @media (max-width: 767px) {
   .footer {
@@ -172,6 +173,12 @@
     margin-top: 24px;
   }
 }
+@media screen and (max-width: 767px) {
+  .snsWrap {
+    position: static;
+    margin-top: 24px;
+  }
+}
 
 .snsLink, .snsLink_fb {
   margin: 0 12px 0 12px;
@@ -195,6 +202,11 @@
   font-size: 38px;
   bottom: 4px;
   position: static;
+}
+@media screen and (max-width: 767px) {
+  .snsLogo_youtb {
+    position: relative;
+  }
 }
 
 .authWrap {

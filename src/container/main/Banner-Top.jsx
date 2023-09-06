@@ -51,10 +51,10 @@ function TopBanner() {
                 transitionTime={1000}
                 preventMovementUntilSwipeScrollTolerance={true}
             >
-        <Image className={style.img} src={banner1} alt="최상단 배너 이미지1"></Image>
-        <Image className={style.img} src={banner2} alt="최상단 배너 이미지2"></Image>
-        <Image className={style.img} src={banner3} alt="최상단 배너 이미지3"></Image>
-        <Image className={style.img} src={banner4} alt="최상단 배너 이미지4"></Image>
+        <Image className={style.img} src={banner1} alt="최상단 배너 이미지1" priority={true}></Image>
+        <Image className={style.img} src={banner2} alt="최상단 배너 이미지2"  priority={true}></Image>
+        <Image className={style.img} src={banner3} alt="최상단 배너 이미지3"  priority={true}></Image>
+        <Image className={style.img} src={banner4} alt="최상단 배너 이미지4"  priority={true}></Image>
       </Carousel>
 
       {/* <div className={style.imgWrapper}>

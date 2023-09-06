@@ -72,6 +72,12 @@
   }
 }
 
+.icon {
+
+  &_black {
+    color: var(--color-black);
+  }
+}
 
 .navItemWrapper {
   @media screen and (max-width: 767px) {

@@ -2,15 +2,15 @@ import Image from 'next/image';
 import style from '../../styles/css/info.module.css'
 import { SectionHeader } from '../../components/SectionHeader'
 import CompanyCardTitle from '../../components/ui/CompanyCardTitle'
-import patners_hana from '/public/partners/logo-partner-1.png';
-import patners_kakao from '/public/partners/logo-partner-9.png';
-import patners_fp from '/public/partners/logo-partner-10.png';
+import patners_hana from '/public/images/partners/logo-partner-1.png';
+import patners_kakao from '/public/images/partners/logo-partner-9.png';
+import patners_fp from '/public/images/partners/logo-partner-10.png';
 
 function CompanyInfo() {
   const logoLoop = (start, length, className) => {
     const newArr = [];
     for (let i = start; i <= length; i++) { 
-      newArr.push(<Image src={'/partners/logo-partner-'+i+'.png'} className={className} width={100} height={100} key={i} alt='파트너 로고'></Image>);
+      newArr.push(<img src={'/images/partners/logo-partner-'+i+'.png'} className={className} key={i} alt='파트너 로고' />);
     }
     return newArr;
   };
