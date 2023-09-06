@@ -1,0 +1,246 @@
+@media (max-width: 767px) {
+  .headerWrapper, .m_headerWrapper {
+    margin: 0;
+    padding-top: 24px;
+  }
+}
+@media (max-width: 1025px) {
+  .headerWrapper, .m_headerWrapper {
+    margin: 24px 0;
+  }
+}
+
+.goBtn, .bt_goBtn {
+  background-color: var(--primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 600;
+  width: 168px;
+  height: 48px;
+  margin-top: 32px;
+}
+
+.container, .bt_container, .m_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  min-width: 360px;
+}
+@media (max-width: 782px) {
+  .container, .bt_container, .m_container {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.innerContainer, .bt_innerContainer {
+  position: absolute;
+  display: flex;
+  padding-left: 16px;
+  min-width: 768px;
+  max-width: 1024px;
+  width: 100%;
+  height: 100vh;
+}
+@media (max-width: 1038px) {
+  .innerContainer, .bt_innerContainer {
+    padding-left: 56px;
+  }
+}
+@media (max-width: 782px) {
+  .innerContainer, .bt_innerContainer {
+    padding-left: 0;
+  }
+}
+
+.headerContainer {
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+  flex-direction: column;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1050px) {
+  .headerContainer {
+    padding-left: 4px;
+  }
+}
+@media (max-width: 782px) {
+  .headerContainer {
+    width: 100%;
+    position: absolute;
+    padding-left: 0;
+  }
+}
+
+.headerWrapper, .m_headerWrapper {
+  color: #fff;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 782px) {
+  .headerWrapper, .m_headerWrapper {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.header {
+  font-size: 54px;
+}
+@media (max-width: 767px) {
+  .header {
+    font-size: 28px;
+  }
+}
+
+.descriptionWrapper {
+  font-size: 22px;
+  margin-top: 18px;
+}
+@media (max-width: 782px) {
+  .descriptionWrapper {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .descriptionWrapper {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+@media (max-width: 782px) {
+  .descriptionWrapper_bt {
+    text-align: center;
+  }
+}
+@media (max-width: 1025px) {
+  .descriptionWrapper_bt {
+    margin-left: 5px;
+  }
+}
+
+.description {
+  padding-bottom: 4px;
+}
+@media screen and (max-width: 767px) {
+  .description {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .goBtn, .bt_goBtn {
+    display: none;
+  }
+}
+
+.imgWrapper {
+  height: 100vh;
+  width: 100%;
+}
+
+.img {
+  width: auto;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.img_m {
+  filter: brightness(0.8);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.m_container {
+  height: 500px;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .m_container {
+    height: 100vh;
+  }
+}
+
+.m_headerWrapper {
+  position: absolute;
+  font-size: 40px;
+}
+
+@media (max-width: 767px) {
+  .m_headerWrapper > h1 {
+    font-size: 38px;
+  }
+}
+
+.bt_container {
+  background-color: var(--primary);
+  height: 540px;
+}
+@media (max-width: 767px) {
+  .bt_container {
+    height: 900px;
+  }
+}
+
+.bt_innerContainer {
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .bt_innerContainer > .headerContainer {
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .bt_innerContainer > .headerContainer > .headerWrapper, .bt_innerContainer > .headerContainer > .m_headerWrapper {
+    margin-top: 40px;
+  }
+}
+
+.bt_goBtn {
+  background-color: var(--color-white);
+  color: var(--primary);
+  width: 200px;
+  margin-top: 16px;
+}
+@media (max-width: 782px) {
+  .bt_goBtn {
+    width: 500px;
+  }
+}
+
+.bt_description {
+  color: #c1c1c1;
+  font-size: 13px;
+  padding: 28px 0 0 4px;
+}
+@media (max-width: 767px) {
+  .bt_description {
+    width: 293px;
+    padding: 24px 0 0 0;
+    margin: 0 auto;
+  }
+}
