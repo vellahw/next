@@ -94,6 +94,7 @@
 .title {
   font-size: 18px;
   font-weight: 600;
+  margin-top: 6px;
 }
 
 .status, .status_end {
