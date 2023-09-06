@@ -1,6 +1,5 @@
 'use client'
  
-import { useRouter, useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import data from '/public/data.json'
@@ -18,9 +17,7 @@ function EventList(props) {
     {eventData.map(i => {
       return (
         <li className={style.item} key={i.no}>
-          <div className={style.itemContainer}
-            // onClick={()=> router.push(`/event/${i.no}`)}
-          >
+          <div className={style.itemContainer}>
             <Link
               href={`/event/${i.no}`}
             >
