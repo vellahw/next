@@ -12,7 +12,7 @@ function EventDetailPage() {
   return (
     <>
         <div className={style.mainImgContainer}>
-            <Image src={eventDetail.mainImg} className={style.mainImg} width={1280} height={520} alt='메인이미지'></Image>
+          <Image src={eventDetail.mainImg} className={style.mainImg} width={1280} height={520} alt='메인이미지'></Image>
         </div>
         <section className={style.section}>
         <div>

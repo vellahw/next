@@ -1,12 +1,34 @@
+@media (max-width: 767px) {
+  .headerWrapper {
+    margin: 0;
+    padding-top: 24px;
+  }
+}
+@media (max-width: 1025px) {
+  .headerWrapper {
+    margin: 24px 0;
+  }
+}
+
 .mainImgContainer {
   width: 100%;
   height: auto;
   padding-top: 64px;
 }
+@media screen and (max-width: 767px) {
+  .mainImgContainer {
+    padding-top: 55px;
+  }
+}
 
 .mainImg {
   width: 100%;
   height: auto;
+}
+@media screen and (max-width: 767px) {
+  .mainImg {
+    content: url("/images/event/event-main_mobile.png");
+  }
 }
 
 .section {
