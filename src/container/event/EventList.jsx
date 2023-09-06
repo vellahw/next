@@ -2,7 +2,6 @@
 
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import Link from 'next/link'
 import data from '/public/data.json'
 import style from '../../styles/css/eventList.module.css' 
 
