@@ -1,0 +1,15 @@
+.mainImgContainer {
+  width: 100vw;
+  padding-top: 64px;
+}
+
+.mainImg {
+  width: 100%;
+  height: auto;
+}
+
+.section {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 40px 0 80px 0;
+}
