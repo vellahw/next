@@ -10,9 +10,8 @@ export const metadata = {
   },
 }
 
-export default function EventPage(props) {
-  const event = data.events[0]
+export default function EventPage() {
     return (
-      <EventList props={event} />
+      <EventList />
       )
   }

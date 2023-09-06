@@ -1,0 +1,75 @@
+.container {
+  height: auto;
+  padding: 100px 0 100px 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 80px 0 80px 0;
+    position: relative;
+  }
+}
+
+@media (max-width: 767px) {
+  .headerWrapper {
+    margin: 0;
+    padding-top: 24px;
+  }
+}
+@media (max-width: 1025px) {
+  .headerWrapper {
+    margin: 24px 0;
+  }
+}
+
+.container {
+  padding-top: 64px;
+}
+@media screen and (max-width: 767px) {
+  .container {
+    padding-top: 55px;
+  }
+}
+
+.coverImgWrap {
+  width: 100%;
+  height: 100vh;
+}
+
+.coverImg {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 767px) {
+  .coverImg {
+    content: url("/images/event/event-main_mobile.png");
+  }
+}
+
+.buildingInfoContaier {
+  max-width: 1024px;
+  margin: 0 auto;
+  color: var(--color-white);
+}
+
+.buildingInfoContaier > div {
+  position: absolute;
+  bottom: 0;
+}
+
+.buildingInfoContaier > address {
+  color: var(--color-white);
+}
+
+.about {
+  background-color: var(--color-gray1);
+  line-height: 58px;
+  font-size: 13px;
+  color: var(--color-gray);
+}
+
+.aboutWrap {
+  margin: 0 auto;
+  max-width: 1024px;
+}

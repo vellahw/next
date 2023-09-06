@@ -45,8 +45,9 @@
 }
 
 .footer {
-  background-color: #f6f6f9;
+  background-color: var(--color-gray1);
   padding: 0;
+  position: relative;
 }
 @media (max-width: 767px) {
   .footer {
@@ -187,6 +188,7 @@
 
 .snsLogo_blog {
   width: 36px;
+  height: auto;
 }
 
 .snsLogo_youtb {

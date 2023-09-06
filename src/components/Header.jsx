@@ -13,7 +13,6 @@ import SideNav from "./SideNav";
 import { NavMenuItem } from "./NavMenuItem";
 
 function Header() {
-  const [isWhiteNav] = useState();
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState('');
   const pathname = usePathname()
@@ -60,9 +59,9 @@ function Header() {
           
           <div className={style.iconWrapper}>
             { !isSideNavOpen ? 
-              <AiOutlineMenu onClick={openMenu} className='icon'/>
+              <AiOutlineMenu onClick={openMenu} className={isActive ? style.icon_black : style.icon}/>
               :
-              <AiOutlineClose onClick={closeMenu} className='icon'/>
+              <AiOutlineClose onClick={closeMenu} className={isActive ? style.icon_black : style.icon}/>
             }
           </div>
 

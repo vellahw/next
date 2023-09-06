@@ -2,9 +2,9 @@ import EventDetailPage from "../../../../container/event/EventDetailPage";
 import data from '/public/data.json'
 
 export const metadata = {
-  title: '직투 | 이벤트 - ' + data.eventDetail[0].title,
+  title: data.eventDetail[0].title + ' | 직투 - 이벤트',
   openGraph: {
-    title: '직투 | 이벤트 - ' + data.eventDetail[0].title,
+    title: data.eventDetail[0].title + ' | 직투 - 이벤트',
     description: '이벤트 페이지입니다.',
     images: data.eventDetail[0].mainImg
   },

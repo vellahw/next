@@ -3,8 +3,9 @@ $font-color: #414551;
 
 .footer {
   @extend %full_container;
-  background-color: #f6f6f9;
+  background-color: var(--color-gray1);
   padding: 0;
+  position: relative;
 
   @media(max-width: 767px) {
     margin-top: 0;
@@ -147,6 +148,7 @@ $font-color: #414551;
 .snsLogo_blog {
   @extend .snsLogo;
   width: 36px;
+  height: auto;
 }
 
 .snsLogo_youtb {
