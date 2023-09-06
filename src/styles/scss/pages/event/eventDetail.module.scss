@@ -1,26 +1,26 @@
 @use '../../common/common';
 
 .mainImgContainer{
-    width: 100%;
-    height: auto;
-    padding-top: 64px;
+  width: 100%;
+  height: auto;
+  padding-top: 64px;
 
-    @include common.mobile_size {
-        padding-top: 55px;
-    }
+  @include common.mobile_size {
+    padding-top: 55px;
+  }
 }
 
 .mainImg {
-    width: 100%;
-    height: auto;
-    @include common.mobile_size {
-        content: url('/images/event/event-main_mobile.png');
-    }
+  width: 100%;
+  height: auto;
+  @include common.mobile_size {
+    content: url('/images/event/event-main_mobile.png');
+  }
 }
 
 
 .section {
-    max-width: 360px;
-    margin: 0 auto;
-    padding: 40px 0 80px 0;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 40px 0 80px 0;
 }

@@ -93,7 +93,7 @@
 }
 
 .card, .card_right {
-  background-color: #F6F6F9;
+  background-color: var(--color-gray1);
   width: 384px;
   height: auto;
   padding: 32px 32px 18px 32px;
