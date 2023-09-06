@@ -112,47 +112,51 @@
     },
     {
         "no": 2,
-        "src": "/images/event/event1.png",
-        "title": "TE물류센터 공모 참여 시 최대 2% 페이백",
+        "src": "/images/event/event3.png",
+        "title": "새해 첫 공모 청약하면 거래 수수료 100% 면제 + 1% 페이백!",
         "status": "종료",
         "url": "/event/2"
     },
     {
         "no": 3,
-        "src": "/images/event/event3.png",
-        "title": "새해 첫 공모 청약하면 거래 수수료 100% 면제 + 1% 페이백!",
+        "src": "/images/event/event2.png",
+        "title": "7호 건물 청약하고 선물과 1만원 받아가세요!",
         "status": "종료",
         "url": "/event/3"
     },
     {
-        "no": 4,
-        "src": "/images/event/event1.png",
-        "title": "부티크 호텔 ‘르릿’ 청약하면 공모 금액 최대 2% 페이백!",
-        "status": "종료",
-        "url": "/event/4"
+      "no": 4,
+      "src": "/images/event/event3.png",
+      "title": "새해 첫 공모 청약하면 거래 수수료 100% 면제 + 1% 페이백!",
+      "status": "종료",
+      "url": "/event/2"
     }
   ],
   "eventDetail": [
     {
      "no": 1,
      "title": "7호 건물 청약하고 선물과 1만원 받아가세요!",
-     "mainImg": "/images/event/event-main.png",
+     "mainImg": "/images/event/event2-main.png",
      "detailImg": "/images/event/event2_detail.png",
      "status": "진행중"
     },
     {
-     "no": 2,
-     "mainImg": "/images/event/event1.png",
-     "status": "종료"
+      "no": 2,
+      "title": "새해 첫 공모 청약하면 거래 수수료 100% 면제 + 1% 페이백!",
+      "mainImg": "/images/event/event3-main.png",
+      "status": "종료"
     },
     {
      "no": 3,
-     "mainImg": "/images/event/event3.png",
+     "title": "7호 건물 청약하고 선물과 1만원 받아가세요!",
+     "mainImg": "/images/event/event2-main.png",
+     "detailImg": "/images/event/event2_detail.png",
      "status": "종료"
     },
     {
      "no": 4,
-     "mainImg": "/images/event/event1.png",
+     "title": "새해 첫 공모 청약하면 거래 수수료 100% 면제 + 1% 페이백!",
+     "mainImg": "/images/event/event3-main.png",
      "status": "종료"
     }
   ]
