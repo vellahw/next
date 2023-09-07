@@ -22,30 +22,30 @@ export function NavMenuItem() {
   //   setIsWhiteNav();
   // };
 
-  // const handleScroll = () => {
-  //   btnRef.current.style.backgroundColor = "var(--primary)";     
-  //   btnRef.current.style.color = "var(--color-white)";     
+  const handleScroll = () => {
+    btnRef.current.style.backgroundColor = "var(--primary)";     
+    btnRef.current.style.color = "var(--color-white)";     
 
-  //   if(!document.documentElement.scrollTop) {
-  //     btnRef.current.style.backgroundColor = "transparent";
-  //     btnRef.current.style.border = "1px solid var(--color-white)";     
-  //     btnRef.current.style.color = "var(--color-white)";
-  //   }
-  // };
+    if(!document.documentElement.scrollTop) {
+      btnRef.current.style.backgroundColor = "transparent";
+      btnRef.current.style.border = "1px solid var(--color-white)";     
+      btnRef.current.style.color = "var(--color-white)";
+    }
+  };
 
-  // useEffect(() => {    
-  //   document.documentElement.scrollTo(0, 0)
+  useEffect(() => {    
+    document.documentElement.scrollTo(0, 0)
 
-  //   const timer = setInterval(() => {
-  //     window.addEventListener("scroll", handleScroll);
-  //   }, 100);
+    const timer = setInterval(() => {
+      window.addEventListener("scroll", handleScroll);
+    }, 100);
 
-  //   return () => {
-  //     clearInterval(timer);
-  //     window.removeEventListener("scroll", handleScroll);
-  //     // document.documentElement.scrollTop;
-  //   };
-  // }, []);
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener("scroll", handleScroll);
+      // document.documentElement.scrollTop;
+    };
+  }, []);
 
   return (
     <>

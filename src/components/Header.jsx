@@ -1,6 +1,6 @@
 'use client';
 import { useRecoilState } from "recoil";
-import { whiteNav, navOpen } from "./atom";
+import { whiteNav, navOpen, isScroll } from "./atom";
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from 'next/navigation'
@@ -16,6 +16,7 @@ import { NavMenuItem } from "./NavMenuItem";
 function Header() {
   const [isNavOpen, setIsNavOpen] = useRecoilState(navOpen);
   const [isWhiteNav, setIsWhiteNav] = useRecoilState(whiteNav);
+  const [scrollPosition, setScrollPosition] = useRecoilState(isScroll);
   const targetRef = useRef(null);  
   const logoRef = useRef();
   const itemRef = useRef();
@@ -29,8 +30,6 @@ function Header() {
   const closeMenu = () => {
     setIsNavOpen(false);
   }
-
-  console.log(isNavOpen)
 
   const handleScroll = () => {
     targetRef.current.style.backgroundColor = "#fff";      

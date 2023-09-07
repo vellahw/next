@@ -9,3 +9,8 @@ export const navOpen = atom({
     key: "navOpen",
     default: false
 })
+
+export const isScroll = atom({
+    key: "isScroll",
+    default: 0
+})
