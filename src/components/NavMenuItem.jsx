@@ -58,29 +58,30 @@ export function NavMenuItem() {
   return (
     <>
       { menuItems.map(i =>{
-        const isActive = pathname === i.path;
+          const isActive = pathname === i.path;
 
-        return (
-          <li
-              className={style.navItem}
-              onClick={()=>{menuClick(i.path)}}
+          return (
+            <li key={i.no}
+                className={style.navItem}
+                onClick={()=>{menuClick(i.path)}}
             >
-          <Link
-            href={i.path}
-            key={i.no}
-            className={isActive ? style.colorChange : ''}
-          >
-              {i.title}
-          </Link>
+              <Link
+                href={i.path}
+                className={isActive ? style.colorChange : ''}
+              >
+                  {i.title}
+              </Link>
             </li>
-        )
+          )
         })
       }
 
       <li> 
         <Button 
           className={
-            pathname != '/' ? style.appDownbtn_change : style.appDownbtn
+            pathname != '/'
+            ? style.appDownbtn_change
+            : style.appDownbtn
           }
           title='직투 앱 다운로드'
           onClick={showQR}
