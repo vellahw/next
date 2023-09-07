@@ -33,8 +33,10 @@
 
   &_white {
     @extend .navWrapper;
-    background-color: var(--color-white);
-    border-bottom: 1px solid #E8E8EC;
+    @media screen and (max-width: 767px) {
+      background-color: var(--color-white);
+      border-bottom: 1px solid #E8E8EC;
+    }
   }
 }
 

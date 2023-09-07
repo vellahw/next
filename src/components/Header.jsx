@@ -1,5 +1,6 @@
 'use client';
-
+import { useRecoilState } from "recoil";
+import { whiteNav, navOpen } from "./atom";
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from 'next/navigation'
@@ -13,7 +14,8 @@ import SideNav from "./SideNav";
 import { NavMenuItem } from "./NavMenuItem";
 
 function Header() {
-  const [isSideNavOpen, setIsSideNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useRecoilState(navOpen);
+  const [isWhiteNav, setIsWhiteNav] = useRecoilState(whiteNav);
   const targetRef = useRef(null);  
   const logoRef = useRef();
   const itemRef = useRef();
@@ -21,12 +23,14 @@ function Header() {
   const isActive = pathname != '/'
 
   const openMenu = () => {
-    setIsSideNavOpen(true);
+    setIsNavOpen(true);
   }
 
   const closeMenu = () => {
-    setIsSideNavOpen(false);
+    setIsNavOpen(false);
   }
+
+  console.log(isNavOpen)
 
   const handleScroll = () => {
     targetRef.current.style.backgroundColor = "#fff";      
@@ -49,7 +53,7 @@ function Header() {
     const timer = setInterval(() => {
       window.addEventListener("scroll", handleScroll);
     }, 100);
-    
+
     return () => {
       clearInterval(timer);
       window.removeEventListener("scroll", handleScroll);
@@ -59,23 +63,22 @@ function Header() {
 
   return (
     <nav className={style.navWrap}>
-      <SideNav sideNavOpen={isSideNavOpen} />
+      <SideNav sideNavOpen={isNavOpen} />
 
       <div
         className={
-         isActive
+         !isWhiteNav && isNavOpen
          ? style.navWrapper_white
          : style.navWrapper
         }
         ref={targetRef}
       >
         <div className={style.navbar}>
-
           <Link href='/'>
             <Image
               className={style.logo }
               src={
-                isActive ?
+                !isWhiteNav && isNavOpen ?
                 logo : logo_white
                 }
               alt="헤더로고"
@@ -86,10 +89,10 @@ function Header() {
           </Link>  
           
           <div className={style.iconWrapper}>
-            { !isSideNavOpen ? 
-              <AiOutlineMenu onClick={openMenu} className={isActive ? style.icon_black : style.icon}/>
+            { !isNavOpen ? 
+              <AiOutlineMenu onClick={openMenu} className={!isWhiteNav && isNavOpen ? style.icon_black : style.icon}/>
               :
-              <AiOutlineClose onClick={closeMenu} className={isActive ? style.icon_black : style.icon}/>
+              <AiOutlineClose onClick={closeMenu} className={!isWhiteNav && isNavOpen ? style.icon_black : style.icon}/>
             }
           </div>
 

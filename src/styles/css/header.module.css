@@ -24,9 +24,11 @@
     transition: none;
   }
 }
-.navWrapper_white {
-  background-color: var(--color-white);
-  border-bottom: 1px solid #E8E8EC;
+@media screen and (max-width: 767px) {
+  .navWrapper_white {
+    background-color: var(--color-white);
+    border-bottom: 1px solid #E8E8EC;
+  }
 }
 
 .navbar {
