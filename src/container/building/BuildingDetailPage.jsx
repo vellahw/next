@@ -23,10 +23,11 @@ function BuildingDetailPage() {
             <Image src={coverImg} alt='빌딩 메인이미지' className={style.coverImg}></Image>
             
             <div className={style.buildingInfoContaier}>
-              {/* <BuildingDetailInfo
+              <BuildingDetailInfo
+                change={true}
                 data={buildingDetail}
                 className={style.buildingInfo}  
-                /> */}
+                />
               </div>
           </div>
 
@@ -75,6 +76,7 @@ function BuildingDetailPage() {
             <Image className={style.img} src={banner3} alt="최상단 배너 이미지3"  priority={true}></Image>
             <Image className={style.img} src={banner4} alt="최상단 배너 이미지4"  priority={true}></Image>
           </Carousel>
+
         </section>
     )
 }

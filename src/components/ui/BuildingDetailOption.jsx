@@ -2,6 +2,8 @@ import style from '../../styles/css/list.module.css'
 
 export default function BuildingOption(props) {
   const data = props.data;
+  const checkChange = props.change;
+  const isDetail = !checkChange;
   const type = data.type;
   
   if(type === '공모예정') {

@@ -41,12 +41,6 @@
   width: 100%;
   height: 100%;
 }
-@media screen and (max-width: 767px) {
-  .coverImg {
-    content: url("/images/event/event-main_mobile.png");
-  }
-}
-
 .buildingInfoContaier {
   max-width: 1024px;
   margin: 0 auto;
@@ -54,8 +48,11 @@
 }
 
 .buildingInfoContaier > div {
+  width: 400px;
   position: absolute;
   bottom: 0;
+  left: 310px;
+  scale: 0.9;
 }
 
 .buildingInfoContaier > address {
@@ -117,6 +114,7 @@
 .imgWrapper {
   height: 100vh;
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .img {
