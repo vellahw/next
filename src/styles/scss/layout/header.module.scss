@@ -101,6 +101,11 @@
   margin: 0 4px;
   padding: 12px;
   font-weight: 500; 
+
+  &_white {
+    @extend .navItem;
+    color: var(--color-black);
+  }
 }
 
 .appDownbtn {
