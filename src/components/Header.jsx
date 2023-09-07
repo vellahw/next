@@ -6,7 +6,7 @@ import Image from "next/image"
 import { usePathname } from 'next/navigation'
 import { AiOutlineMenu } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
-import {React, useState, useEffect, useRef} from 'react';
+import {React, useEffect, useRef} from 'react';
 import style from '../styles/css/header.module.css'
 import logo from '/public/logos/ziktu-logo.png'
 import logo_white from '/public/logos/ziktu-logo-w.png'
@@ -16,12 +16,10 @@ import { NavMenuItem } from "./NavMenuItem";
 function Header() {
   const [isNavOpen, setIsNavOpen] = useRecoilState(navOpen);
   const [isWhiteNav, setIsWhiteNav] = useRecoilState(whiteNav);
-  const [scrollPosition, setScrollPosition] = useRecoilState(isScroll);
   const targetRef = useRef(null);  
   const logoRef = useRef();
   const itemRef = useRef();
   const pathname = usePathname()
-  const isActive = pathname != '/'
 
   const openMenu = () => {
     setIsNavOpen(true);
@@ -49,17 +47,19 @@ function Header() {
   useEffect(() => {    
     document.documentElement.scrollTo(0, 0)
 
-    const timer = setInterval(() => {
-      window.addEventListener("scroll", handleScroll);
-    }, 100);
-
-    return () => {
-      clearInterval(timer);
-      window.removeEventListener("scroll", handleScroll);
-      document.documentElement.scrollTop;
-    };
+    if(pathname === '/') {
+      const timer = setInterval(() => {
+        window.addEventListener("scroll", handleScroll);
+      }, 100);
+  
+      return () => {
+        clearInterval(timer);
+        window.removeEventListener("scroll", handleScroll);
+        document.documentElement.scrollTop;
+      };
+    }
   }, []);
-
+    
   return (
     <nav className={style.navWrap}>
       <SideNav sideNavOpen={isNavOpen} />

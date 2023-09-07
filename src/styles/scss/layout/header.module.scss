@@ -20,6 +20,7 @@
   position: fixed;
   z-index: 999;
   transition: background-color 0.2s linear 0s;
+  color: var(--color-white);
   
   @media screen and (max-width: 767px) {
     width: 100vw;
@@ -100,7 +101,7 @@
 
 .navItem {
   cursor: pointer;
-  margin: 0 4px;
+  margin: 0 6px;
   padding: 12px;
   font-weight: 500; 
 
@@ -119,6 +120,7 @@
   font-size: 16px;
   width: 138px;
   height: 40px;
+  margin-left: 8px;
     
   @media screen and (max-width: 767px) {
     display: none;

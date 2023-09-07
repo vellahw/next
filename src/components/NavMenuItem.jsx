@@ -2,12 +2,16 @@
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
-import {React, useState, useRef, useEffect} from 'react'
+import {React, useRef, useEffect} from 'react'
+import { useRecoilState } from "recoil";
+import { whiteNav, navOpen, isScroll } from "./atom";
 import Button from './ui/Button'
 import style from '../styles/css/header.module.css'
 import data from '/public/data.json'
 
 export function NavMenuItem() {
+  const [isNavOpen, setIsNavOpen] = useRecoilState(navOpen);
+  const [isWhiteNav, setIsWhiteNav] = useRecoilState(whiteNav);
   const router = useRouter()
   const pathname = usePathname()
   const menuItems = data.menuItems;
@@ -17,34 +21,38 @@ export function NavMenuItem() {
     alert("QR");
   }
 
-  // const menuClick = (menu) => {
-  //   router.push(menu)
-  //   setIsWhiteNav();
-  // };
+  const menuClick = (menu) => {
+    router.push(menu)
+    setIsWhiteNav(1);
+  };
 
   const handleScroll = () => {
-    btnRef.current.style.backgroundColor = "var(--primary)";     
-    btnRef.current.style.color = "var(--color-white)";     
+    if(pathname === '/') {
+      btnRef.current.style.backgroundColor = "var(--primary)";     
+      btnRef.current.style.color = "var(--color-white)";     
 
-    if(!document.documentElement.scrollTop) {
-      btnRef.current.style.backgroundColor = "transparent";
-      btnRef.current.style.border = "1px solid var(--color-white)";     
-      btnRef.current.style.color = "var(--color-white)";
+      if(!document.documentElement.scrollTop) {
+        btnRef.current.style.backgroundColor = "transparent";
+        btnRef.current.style.border = "1px solid var(--color-white)";     
+        btnRef.current.style.color = "var(--color-white)";
+      }
     }
   };
 
   useEffect(() => {    
     document.documentElement.scrollTo(0, 0)
 
-    const timer = setInterval(() => {
-      window.addEventListener("scroll", handleScroll);
-    }, 100);
-
-    return () => {
-      clearInterval(timer);
-      window.removeEventListener("scroll", handleScroll);
-      // document.documentElement.scrollTop;
-    };
+    if(pathname === '/') {
+      const timer = setInterval(() => {
+        window.addEventListener("scroll", handleScroll);
+      }, 100);
+  
+      return () => {
+        clearInterval(timer);
+        window.removeEventListener("scroll", handleScroll);
+        document.documentElement.scrollTop;
+      };
+    }
   }, []);
 
   return (
@@ -53,17 +61,18 @@ export function NavMenuItem() {
         const isActive = pathname === i.path;
 
         return (
+          <li
+              className={style.navItem}
+              onClick={()=>{menuClick(i.path)}}
+            >
           <Link
             href={i.path}
             key={i.no}
             className={isActive ? style.colorChange : ''}
           >
-            <li className={
-              style.navItem}
-            >
               {i.title}
-            </li>
           </Link>
+            </li>
         )
         })
       }
