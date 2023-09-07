@@ -81,7 +81,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 
 .point {
@@ -97,4 +97,39 @@
 
 .point > h2 {
   padding-bottom: 6px;
+}
+
+.title {
+  text-align: center;
+  padding: 150px 0 198px 0;
+}
+
+.title > h3 {
+  color: var(--color-gray);
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.title > h1 {
+  font-size: 32px;
+}
+
+.imgWrapper {
+  height: 100vh;
+  width: 100%;
+}
+
+.img {
+  width: auto;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel.carousel-slider .control-arrow {
+  color: red;
+}
+
+.carousel .control-dots .dot {
+  box-shadow: none !important;
 }

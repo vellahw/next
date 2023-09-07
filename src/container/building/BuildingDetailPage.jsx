@@ -1,7 +1,13 @@
 'use client'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import {Carousel} from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import data from '/public/data.json'
+import banner1 from '/public/images/banners/cover1.png' 
+import banner2 from '/public/images/banners/cover2.png' 
+import banner3 from '/public/images/banners/cover3.png' 
+import banner4 from '/public/images/banners/cover4.png' 
 import coverImg from '/public/images/buildings/commerce.png'
 import BuildingDetailInfo from '../../components/ui/BuildingDetailInfo'
 import style from '../../styles/css/detail.module.css'
@@ -47,7 +53,28 @@ function BuildingDetailPage() {
             </div>
           </div>
 
-            {/* 캐로셀 */}
+          <div className={style.title}>
+            <h3>
+              부동산금융 명가 대신파이낸셜그룹의 노하우를 담은 첫번째 건물
+            </h3>
+            <h1>
+              압구정 커머스빌딩
+            </h1>
+          </div>
+
+          <Carousel
+            className={style.imgWrapper}
+            autoPlay={true}
+            infiniteLoop={true}
+            showStatus={false}
+            transitionTime={1000}
+            preventMovementUntilSwipeScrollTolerance={true}
+          >
+            <Image className={style.img} src={banner1} alt="최상단 배너 이미지1" priority={true}></Image>
+            <Image className={style.img} src={banner2} alt="최상단 배너 이미지2"  priority={true}></Image>
+            <Image className={style.img} src={banner3} alt="최상단 배너 이미지3"  priority={true}></Image>
+            <Image className={style.img} src={banner4} alt="최상단 배너 이미지4"  priority={true}></Image>
+          </Carousel>
         </section>
     )
 }
