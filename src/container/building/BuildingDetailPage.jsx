@@ -45,9 +45,9 @@ function BuildingDetailPage() {
               <h2>안정적인</h2>
               <h2>임대수익 기대</h2>
             </div>
+          </div>
 
             {/* 캐로셀 */}
-          </div>
         </section>
     )
 }

@@ -73,3 +73,28 @@
   margin: 0 auto;
   max-width: 1024px;
 }
+
+.investInfoWrap {
+  height: 300px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.point {
+  width: 366px;
+  text-align: center;
+}
+
+.point > h5 {
+  font-size: 14px;
+  color: var(--primary);
+  padding-bottom: 14px;
+}
+
+.point > h2 {
+  padding-bottom: 6px;
+}
