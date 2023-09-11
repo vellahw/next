@@ -4,8 +4,6 @@ import Link from 'next/link';
 
 function ContentsList() {
     const news = data.news;
-    console.log(
-      )
   return (
     <>
     {news.map(index=>{
