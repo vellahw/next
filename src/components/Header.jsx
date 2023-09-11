@@ -59,7 +59,6 @@ function Header() {
       };
     }
   }, []);
-    
   return (
     <nav className={style.navWrap}>
       <SideNav sideNavOpen={isNavOpen} />
