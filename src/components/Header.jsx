@@ -101,6 +101,7 @@ function Header() {
               <AiOutlineMenu
                 onClick={openMenu}
                 className={
+                  scrollPosition > 0 ||
                   isWhiteNav || isMobileSideOpen
                   ? style.icon_black
                   : style.icon}/>
