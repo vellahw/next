@@ -4,6 +4,12 @@
   }
 }
 
+@mixin responsive_size {
+  @media screen and (max-width: 1048px) {
+    @content;
+  }
+}
+
 %full_container {
   height: auto;
   padding: 100px 0 100px 0;

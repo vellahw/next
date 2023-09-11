@@ -19,9 +19,6 @@
   }
 }
 
-.headerWrapper {
-  margin: 38px 0 0 80px;
-}
 @media (max-width: 767px) {
   .headerWrapper {
     margin: 0;
@@ -62,12 +59,12 @@
 .container {
   height: 690px;
 }
-@media (max-width: 1048px) {
+@media screen and (max-width: 1048px) {
   .container {
     height: 900px;
   }
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .container {
     height: 760px;
   }
@@ -84,7 +81,7 @@
   display: flex;
   position: relative;
 }
-@media (max-width: 1048px) {
+@media screen and (max-width: 1048px) {
   .cardWrapper {
     padding: 0;
     flex-direction: column;
@@ -99,7 +96,7 @@
   padding: 32px 32px 18px 32px;
   border-radius: 18px;
 }
-@media (max-width: 1048px) {
+@media screen and (max-width: 1048px) {
   .card, .card_right {
     position: absolute;
     width: calc(100% - 124px);
@@ -114,7 +111,7 @@
     width: calc(100% - 34px);
   }
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .card, .card_right {
     margin-left: 0;
     width: calc(100% - 48px);
@@ -127,7 +124,7 @@
   top: 70px;
   left: 552px;
 }
-@media (max-width: 1048px) {
+@media screen and (max-width: 1048px) {
   .card_right {
     top: 288px;
     left: 0;
@@ -135,7 +132,7 @@
     padding-bottom: 24px;
   }
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .card_right {
     top: 254px;
   }
@@ -146,7 +143,7 @@
   margin-bottom: 24px;
   font-size: 14px;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .cardTitle {
     font-size: 12px;
   }
@@ -157,7 +154,7 @@
   line-height: 36px;
   font-weight: 600;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .cardDescription {
     font-size: 16px;
     line-height: 26px;
@@ -173,23 +170,35 @@
   margin-top: 32px;
   float: right;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .logoWrapper, .logoWrapper_right {
     justify-content: normal;
+  }
+}
+@media screen and (max-width: 406px) {
+  .logoWrapper, .logoWrapper_right {
+    flex-wrap: nowrap;
+    scale: 0.9;
+    transform: translateX(-16px);
   }
 }
 .logoWrapper_right {
   width: 294px;
 }
-@media (max-width: 1048px) {
+@media screen and (max-width: 1048px) {
   .logoWrapper_right {
     width: 100%;
   }
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .logoWrapper_right {
     width: 294px;
     float: none;
+  }
+}
+@media screen and (max-width: 406px) {
+  .logoWrapper_right {
+    flex-wrap: wrap;
   }
 }
 
@@ -218,7 +227,7 @@
   height: 34px;
   padding: 0 0 14px 22px;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .partners {
     padding-left: 0;
     padding-right: 25px;
@@ -270,14 +279,14 @@
     margin: 32px 0;
   }
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .btnWrap {
     flex-direction: column-reverse;
     align-items: start;
   }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .btnWrap > a {
     width: 100%;
   }
@@ -288,7 +297,7 @@
   margin-top: 0;
   margin-right: 30px;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .helpBtn {
     display: block;
     margin: 32px 0 0 0;

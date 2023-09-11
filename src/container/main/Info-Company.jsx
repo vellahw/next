@@ -10,7 +10,13 @@ function CompanyInfo() {
   const logoLoop = (start, length, className) => {
     const newArr = [];
     for (let i = start; i <= length; i++) { 
-      newArr.push(<img src={'/images/partners/logo-partner-'+i+'.png'} className={className} key={i} alt='파트너 로고' />);
+      newArr.push(
+        <img
+          src={'/images/partners/logo-partner-'+i+'.png'}
+          className={className}
+          key={i}
+          alt='파트너 로고' />
+      );
     }
     return newArr;
   };
