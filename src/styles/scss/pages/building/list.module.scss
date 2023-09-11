@@ -14,10 +14,10 @@
   flex-direction: column;
   margin-top: 40px;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size {
     padding: 0;
     margin-top: 20px;
-  }  
+  }
 }
 
 .infoWrapper {
@@ -30,7 +30,7 @@
   overflow: hidden;
   margin-bottom: 40px;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size {
     flex-direction: column;
     justify-content: normal;
     height: auto;
@@ -42,7 +42,7 @@
   height: 100%;
   overflow: hidden;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size {
     width: 100%;
     height: 50%;
   }
@@ -53,7 +53,7 @@
   height: 100%;
   object-fit: cover;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size {
     height: calc(50vh - 50px);
   }
 }
@@ -66,7 +66,7 @@
   justify-content: space-between;
   flex: 1 1 0%;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size {
     width: 100%;
     height: 50%;
   }
@@ -74,9 +74,9 @@
 
 .statusContainer {
   margin: 40px;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size{
     margin: 10px 0;
   }
 }
@@ -93,7 +93,7 @@
   padding: 0px 20px;
   border-radius: 20px;
   
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size{
     scale: 0.75;
   }
 
@@ -106,9 +106,9 @@
 
 .buildingName {
   font-size: 40px;
-  margin: 40px 40px 8px 40px;
+  margin: 10px 40px 8px 40px;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size{
     margin: 0 16px 0 16px;
     font-size: 28px;
   }
@@ -121,23 +121,30 @@
   color: #555555;
   display: flex;
   align-items: center;
-
-  
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size{
     margin: 10px 16px 0 16px;
     font-size: 14px;
+  }
+
+  &_white {
+    @extend .buildingAddress;
+    color: var(--color-white);
   }
 }
 
 .locationIcon {
   font-size: 20px;
   margin-right: 4px;
+
+  &_white {
+    @extend .locationIcon;
+  }
 }
 
 .detailOptionWrapper {
   margin: 0 40px 40px 40px;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size{
     margin: 0 16px 16px 16px;
   }
 }
@@ -152,13 +159,13 @@
     border-top: 1px solid #E8E8EC;
     padding-top: 23px;
 
-    @media screen and (max-width: 767px) {
+    @include common.mobile_size{
       padding-top: 10px;
       border: none;
     }
   }
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size{
     margin-top: 10px;
   }
 }
@@ -166,9 +173,9 @@
 .optionTitle {
   font-size: 16px;
   font-weight: 600;
-  color: #555555;
+  color: inherit;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size{
     font-size: 14px;
   }
 }
@@ -177,7 +184,7 @@
   font-size: 18px;
   font-weight: 600;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size{
     font-size: 14px;
   }
 }
@@ -185,7 +192,7 @@
 .helpContainer {
   margin-bottom: 20px;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size{
     margin-bottom: 0;
   }
 }
@@ -195,7 +202,7 @@
   margin-bottom: 16px;
   font-size: 28px;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size{
     font-size: 20px;
   }
 }
@@ -204,7 +211,7 @@
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size{
     flex-direction: column;
     padding: 0;
   }
@@ -219,7 +226,7 @@
   align-items: center;
   cursor: pointer;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size{
     width: 100%;
     height: 90px;
     margin-bottom: 16px;
@@ -238,7 +245,7 @@
   margin-left: 30px;
   width: 50%;
 
-  @media screen and (max-width: 767px) {
+  @include common.mobile_size{
     margin-left: 16px;
     font-size: 16px;
   }
