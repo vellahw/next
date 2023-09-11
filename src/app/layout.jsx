@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import '../styles/css/variable.css';
@@ -17,9 +16,7 @@ export default async function RootLayout({ children }) {
   return (
       <html lang="ko">
         <body>
-          <Header/>
-          {children}
-          <Footer />
+            {children}
         </body>
       </html>
 

@@ -11,6 +11,7 @@
   position: fixed;
   z-index: 999;
   transition: background-color 0.2s linear 0s;
+  color: var(--color-white);
 }
 @media screen and (max-width: 767px) {
   .navWrapper, .navWrapper_white {
@@ -24,9 +25,11 @@
     transition: none;
   }
 }
-.navWrapper_white {
-  background-color: var(--color-white);
-  border-bottom: 1px solid #E8E8EC;
+@media screen and (max-width: 767px) {
+  .navWrapper_white {
+    background-color: var(--color-white);
+    border-bottom: 1px solid #E8E8EC;
+  }
 }
 
 .navbar {
@@ -83,11 +86,14 @@
   padding: 0;
 }
 
-.navItem {
+.navItem, .navItem_white {
   cursor: pointer;
-  margin: 0 4px;
+  margin: 0 6px;
   padding: 12px;
   font-weight: 500;
+}
+.navItem_white {
+  color: var(--color-black);
 }
 
 .appDownbtn, .appDownbtn_change {
@@ -99,6 +105,7 @@
   font-size: 16px;
   width: 138px;
   height: 40px;
+  margin-left: 8px;
 }
 @media screen and (max-width: 767px) {
   .appDownbtn, .appDownbtn_change {

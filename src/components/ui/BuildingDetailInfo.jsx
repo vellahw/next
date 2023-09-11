@@ -4,6 +4,8 @@ import BuildingDetailOption from './BuildingDetailOption';
 
 function BuildingDetailInfo(props) {
   const buildings = props.data
+  const checkChange = props.change
+  const isDetail = !checkChange
 
   return (
     <div className={style.innerInfoWrapper}>
@@ -24,8 +26,19 @@ function BuildingDetailInfo(props) {
       </div>  
       <div>
         <h1 className={style.buildingName}>{buildings.name}</h1>
-        <address className={style.buildingAddress}>
-          <MdLocationOn className={style.locationIcon} />
+        <address
+          className={
+            isDetail
+            ? style.buildingAddress
+            : style.buildingAddress_white
+          }
+        >
+          <MdLocationOn
+            className={
+              isDetail
+              ? style.locationIcon
+              : style.locationIcon_white} />
+
           {buildings.address}
         </address>
         <div className={style.detailOptionWrapper}>
