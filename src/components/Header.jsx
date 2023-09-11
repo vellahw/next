@@ -28,7 +28,9 @@ function Header() {
 
   const closeMenu = () => {
     setIsMobileSideOpen(false);
-    setIsWhiteNav(0)
+    if(pathname === '/') {
+      setIsWhiteNav(0)
+    }
   }
 
   const clickLogo = () => {
