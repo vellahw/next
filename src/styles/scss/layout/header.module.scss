@@ -7,11 +7,6 @@
   min-width: 360px;
 }
 
-// .navWrap_white {
-//   color: var(--color-black);
-//   transition: background-color 0.2s linear 0s;
-// }
-
 .navWrapper {
   @include flex-center;
   min-width: 360px;
@@ -19,8 +14,8 @@
   height: 64px;
   position: fixed;
   z-index: 999;
-  transition: background-color 0.2s linear 0s;
   color: var(--color-white);
+  // transition: background-color 0.2s linear 0s;
   
   @media screen and (max-width: 767px) {
     width: 100vw;
@@ -34,6 +29,9 @@
 
   &_white {
     @extend .navWrapper;
+    background-color: var(--color-white);
+    border-bottom: 1px solid #E8E8EC;
+
     @media screen and (max-width: 767px) {
       background-color: var(--color-white);
       border-bottom: 1px solid #E8E8EC;
@@ -111,6 +109,10 @@
   }
 }
 
+.colorChange {
+  color: var(--primary) !important;
+}
+
 .appDownbtn {
   background-color: transparent;
   color: #fff;
@@ -158,8 +160,4 @@
   &_none {
     display: none;
   }
-}
-
-.colorChange {
-  color: var(--primary);
 }

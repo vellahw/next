@@ -1,4 +1,5 @@
 'use client';
+import {React, useEffect, useRef} from 'react';
 import { useRecoilState } from "recoil";
 import { whiteNav, navOpen, isScroll } from "./atom";
 import Link from "next/link"
@@ -6,66 +7,69 @@ import Image from "next/image"
 import { usePathname } from 'next/navigation'
 import { AiOutlineMenu } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
-import {React, useEffect, useRef} from 'react';
 import style from '../styles/css/header.module.css'
 import logo from '/public/logos/ziktu-logo.png'
 import logo_white from '/public/logos/ziktu-logo-w.png'
 import SideNav from "./SideNav";
 import { NavMenuItem } from "./NavMenuItem";
+import Button from './ui/Button'
 
 function Header() {
-  const [isNavOpen, setIsNavOpen] = useRecoilState(navOpen);
+  const [isMobileSideOpen, setIsMobileSideOpen] = useRecoilState(navOpen);
   const [isWhiteNav, setIsWhiteNav] = useRecoilState(whiteNav);
+  const [scrollPosition, setScrollPosition] = useRecoilState(isScroll);
   const targetRef = useRef(null);  
-  const logoRef = useRef();
-  const itemRef = useRef();
   const pathname = usePathname()
 
   const openMenu = () => {
-    setIsNavOpen(true);
+    setIsMobileSideOpen(true);
+    setIsWhiteNav(1)
   }
 
   const closeMenu = () => {
-    setIsNavOpen(false);
+    setIsMobileSideOpen(false);
+    setIsWhiteNav(0)
+  }
+
+  const clickLogo = () => {
+    setIsWhiteNav(0)
+  }
+
+  const showQR = () => {
+    alert("QR");
   }
 
   const handleScroll = () => {
-    targetRef.current.style.backgroundColor = "#fff";      
-    targetRef.current.style.borderBottom = "1px solid #E8E8EC";    
-    logoRef.current.src = "/logos/ziktu-logo.png";
-    logoRef.current.srcset = "";
-    itemRef.current.style.color = "var(--color-black)";
+    setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+    targetRef.current.style.transition ="background-color 0.2s linear 0s";
+  }
 
-    if(!document.documentElement.scrollTop) {
-      targetRef.current.style.backgroundColor = "transparent";
-      targetRef.current.style.borderBottom = "none";      
-      logoRef.current.src = "/logos/ziktu-logo-w.png";
-      itemRef.current.style.color = "var(--color-white)";
+  useEffect(() => { 
+    if(pathname !== '/'){
+      setIsWhiteNav(1)
     }
-  };
 
-  useEffect(() => {    
-    document.documentElement.scrollTo(0, 0)
-
-    if(pathname === '/') {
-      const timer = setInterval(() => {
+    window.removeEventListener("scroll", handleScroll);
+    const timer = setInterval(() => {
         window.addEventListener("scroll", handleScroll);
-      }, 100);
-  
-      return () => {
+    }, 100);
+    
+    return () => {
+        document.documentElement.scrollTo(0, 0)
         clearInterval(timer);
         window.removeEventListener("scroll", handleScroll);
-        document.documentElement.scrollTop;
-      };
-    }
+    };
   }, []);
+
   return (
     <nav className={style.navWrap}>
-      <SideNav sideNavOpen={isNavOpen} />
+      <SideNav sideNavOpen={isMobileSideOpen} />
 
       <div
         className={
-         !isWhiteNav && isNavOpen
+         scrollPosition > 0 ||
+         isWhiteNav || 
+         isMobileSideOpen
          ? style.navWrapper_white
          : style.navWrapper
         }
@@ -76,27 +80,54 @@ function Header() {
             <Image
               className={style.logo }
               src={
-                !isWhiteNav && isNavOpen ?
-                logo : logo_white
-                }
+                isWhiteNav ||
+                scrollPosition > 0
+                ? logo
+                : logo_white
+              }
+              onClick={
+                clickLogo
+              }
               alt="헤더로고"
               priority={true}
-              ref={logoRef}
             >
             </Image>
           </Link>  
           
           <div className={style.iconWrapper}>
-            { !isNavOpen ? 
-              <AiOutlineMenu onClick={openMenu} className={!isWhiteNav && isNavOpen ? style.icon_black : style.icon}/>
+            { !isMobileSideOpen ? 
+              <AiOutlineMenu
+                onClick={openMenu}
+                className={
+                  isWhiteNav || isMobileSideOpen
+                  ? style.icon_black
+                  : style.icon}/>
               :
-              <AiOutlineClose onClick={closeMenu} className={!isWhiteNav && isNavOpen ? style.icon_black : style.icon}/>
+              <AiOutlineClose
+                onClick={closeMenu}
+                className={
+                  isWhiteNav || isMobileSideOpen
+                  ? style.icon_black
+                  : style.icon}/>
             }
           </div>
 
           <div className={style.navItemWrapper}>
-            <ul className={style.navItemList} ref={itemRef}>
+            <ul className={style.navItemList}>
               <NavMenuItem />
+
+              <li> 
+                <Button 
+                  className={
+                    isWhiteNav ||
+                    scrollPosition > 0
+                    ? style.appDownbtn_change
+                    : style.appDownbtn
+                  }
+                  title='직투 앱 다운로드'
+                  onClick={showQR}
+                />
+              </li>
             </ul>
           </div>
         </div>
