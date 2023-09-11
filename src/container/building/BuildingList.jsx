@@ -27,6 +27,7 @@ export function BuildingList() {
                         alt='빌딩썸네일'
                         width={502}
                         height={502}
+                        priority={true}
                         >
                     </Image>
                     </div>
