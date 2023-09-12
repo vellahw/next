@@ -1,17 +1,16 @@
-@use '../common/common';
+@use '../../common/common';
 
 .container {
   @extend %basic_container;
   height: 690px;
 
-  @media (max-width: 1048px) {
+  @include common.responsive_size {
     height: 900px;
   }
 
-  @media (max-width: 767px) {
+  @include common.mobile_size {
     height: 760px;
   }
-  
 }
 
 .title {
@@ -29,7 +28,7 @@
   display: flex;
   position: relative;
   
-  @media (max-width: 1048px) {
+  @include common.responsive_size {
     padding: 0;
     flex-direction: column;
     width: 100%;
@@ -43,7 +42,7 @@
   padding: 32px 32px 18px 32px;
   border-radius: 18px;
   
-  @media (max-width: 1048px) {
+  @include common.responsive_size {
     position: absolute;
     width: calc(100% - 124px);
     height: auto;
@@ -56,11 +55,11 @@
     width: calc(100% - 34px);
   }
 
-  @media (max-width: 767px) {
+  @include common.mobile_size {
     margin-left: 0;
     width: calc(100% - 48px);
   }
-  
+
   &_right {
     @extend .card;
     background-color: #E7EBFA;
@@ -69,14 +68,14 @@
     top: 70px;
     left: 552px;
     
-    @media (max-width: 1048px) {
+    @include common.responsive_size {
       top: 288px;
       left: 0;
       height: 236px;
       padding-bottom: 24px;
     }
 
-    @media (max-width: 767px) {
+    @include common.mobile_size {
       top: 254px;
     }
   }
@@ -86,8 +85,8 @@
   margin: 0;
   margin-bottom: 24px;
   font-size: 14px;
-  
-  @media (max-width: 767px) {
+
+  @include common.mobile_size {
     font-size: 12px;
   }
 }
@@ -97,7 +96,7 @@
   line-height: 36px;
   font-weight: 600;
 
-  @media (max-width: 767px) {
+  @include common.mobile_size {
     font-size: 16px;
     line-height: 26px;
   }
@@ -112,21 +111,31 @@
   margin-top: 32px;
   float: right;
   
-  @media (max-width: 767px) {
+  @include common.mobile_size {
     justify-content: normal;
+  }
+
+  @media screen and (max-width: 406px) {
+    flex-wrap:nowrap;
+    scale: 0.9;
+    transform: translateX(-16px);
   }
 
   &_right {
     @extend .logoWrapper;
     width: 294px;
 
-    @media (max-width: 1048px) {
+    @include common.responsive_size {
       width: 100%;
     }
 
-    @media (max-width: 767px) {
+    @include common.mobile_size {
       width: 294px;
       float: none;
+    }
+
+    @media screen and (max-width: 406px) {
+      flex-wrap: wrap;
     }
   }
 }
@@ -160,7 +169,7 @@
     padding: 0 0 14px 22px;
   }
 
-  @media (max-width: 767px) {
+  @include common.mobile_size {
     padding-left: 0;
     padding-right: 25px;
 
@@ -216,14 +225,14 @@
     margin: 32px 0;
   }
 
-  @media (max-width: 767px) {
+  @include common.mobile_size {
     flex-direction: column-reverse;
     align-items: start;
   }
 }
 
 .btnWrap > a {
-  @media (max-width: 767px) {
+  @include common.mobile_size {
     width: 100%;
   }
 }
@@ -234,7 +243,7 @@
   margin-top: 0;
   margin-right: 30px;
   
-  @media (max-width: 767px) {
+  @include common.mobile_size {
     display: block;
     margin: 32px 0 0 0;
     width: 100%;

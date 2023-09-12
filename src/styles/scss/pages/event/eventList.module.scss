@@ -1,15 +1,19 @@
 @use '../../common/common';
 
 @mixin mobile_w_100 {
-  @include common.mobile_size {
+  @media screen and (max-width: 1015px) {
     width: 100%;
-
-    @content;
   }
+
+  @content;
 }
 
 .container {
   @extend %list_container;
+
+  @media screen and (max-width: 1015px) {
+    margin: 0 16px;
+  }
 
   @include common.mobile_size {
     padding-top: 100px;
@@ -60,15 +64,19 @@
 .endInfo {
   z-index: 1;
   position: absolute;
-  font-size: 20px;
+  font-size: 1.7rem;
   font-weight: 500;
   color: #b5b5b5;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  @include common.mobile_size {
-    font-size: 40px;  
+  @media screen and (max-width: 494px) {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 440px) {
+    font-size: 1.2em;
   }
 }
 
