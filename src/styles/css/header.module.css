@@ -10,7 +10,6 @@
   height: 64px;
   position: fixed;
   z-index: 999;
-  transition: background-color 0.2s linear 0s;
   color: var(--color-white);
 }
 @media screen and (max-width: 767px) {
@@ -24,6 +23,10 @@
   .navWrapper, .navWrapper_white {
     transition: none;
   }
+}
+.navWrapper_white {
+  background-color: var(--color-white);
+  border-bottom: 1px solid #E8E8EC;
 }
 @media screen and (max-width: 767px) {
   .navWrapper_white {
@@ -96,6 +99,10 @@
   color: var(--color-black);
 }
 
+.colorChange {
+  color: var(--primary) !important;
+}
+
 .appDownbtn, .appDownbtn_change {
   background-color: transparent;
   color: #fff;
@@ -141,8 +148,4 @@
 }
 .overlay_none {
   display: none;
-}
-
-.colorChange {
-  color: var(--primary);
 }
