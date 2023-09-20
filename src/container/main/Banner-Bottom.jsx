@@ -13,7 +13,7 @@ function BottomBanner() {
         <div className={style.bt_innerContainer}>
           <div className={style.headerContainer}>
             <div className={style.headerWrapper}>
-              <h1 className={style.header}>지금 바로 직투에서</h1>
+              <h1 className={style.header}>지금 바로 카사에서</h1>
               <h1 className={style.header}>건물주주가 되어보세요</h1>
             </div>
 

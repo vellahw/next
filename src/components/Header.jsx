@@ -8,8 +8,8 @@ import { usePathname } from 'next/navigation'
 import { AiOutlineMenu } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
 import style from '../styles/css/header.module.css'
-import logo from '/public/logos/ziktu-logo.png'
-import logo_white from '/public/logos/ziktu-logo-w.png'
+import logo from '/public/logos/logo.png'
+import logo_white from '/public/logos/logo-white.png'
 import SideNav from "./SideNav";
 import { NavMenuItem } from "./NavMenuItem";
 import Button from './ui/Button'
@@ -127,7 +127,7 @@ function Header() {
                     ? style.appDownbtn_change
                     : style.appDownbtn
                   }
-                  title='직투 앱 다운로드'
+                  title='카사 앱 다운로드'
                   onClick={showQR}
                 />
               </li>

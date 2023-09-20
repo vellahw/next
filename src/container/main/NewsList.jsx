@@ -6,7 +6,7 @@ function NewsList() {
   return(
     <section className={style.container}>
       <div className={style.wrapper}>
-        <h2 className={style.sectionHeader}>직투 소식</h2>
+        <h2 className={style.sectionHeader}>카사 소식</h2>
 
         <div className={style.contentsWrap}>
           <div className={style.headerWrapper}>

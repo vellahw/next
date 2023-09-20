@@ -3,10 +3,10 @@ import BuildingDetailPage from '../../../../container/building/BuildingDetailPag
 import { ResolvingMetadata } from 'next'
 
 export const metadata = {
-  title: '직투 - 빌딩 정보',
+  title: '카사 - 빌딩 정보',
   description: '빌딩 정보 안내 페이지입니다.',
   openGraph: {
-    title: '직투 - 빌딩 정보',
+    title: '카사 - 빌딩 정보',
     description: '빌딩 정보 안내 페이지입니다.',
     images: '/og_image.png'
   },

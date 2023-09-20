@@ -17,16 +17,16 @@ function Footer() {
         <div className={style.infoWrap}>
           <address className={style.info}>
             <span className={style.info_title}>언론보도</span>
-            <address className={style.info_text}>press@ziktu.com</address>
+            <address className={style.info_text}>press@kasa.com</address>
           </address>
           <div className={style.line}></div>
           <address className={style.info}>
             <span className={style.info_title}>대표문의</span>
-            <address className={style.info_text}>contact@ziktu.com</address>
+            <address className={style.info_text}>contact@kasa.com</address>
           </address>
         </div>
 
-        <p className={style.copy}>ⓒ 2023. ziktu Inc. All rights reserved.</p>
+        <p className={style.copy}>ⓒ 2023. kasa Inc. All rights reserved.</p>
 
         <div className={style.article}>
           <Link className={style.link} href="http://hackers.iwinv.net/privacy_policy.html" target="_blank">
@@ -40,7 +40,7 @@ function Footer() {
         </div>
 
         <div className={style.companyWrap}>
-          <p className={style.comTitle}>직투코리아</p>
+          <p className={style.comTitle}>카사코리아</p>
           <div className={style.article}>
             <span className={style.text}>사업자 등록번호 369-88-01323</span>
             <div className={style.line_se}></div>
@@ -89,7 +89,7 @@ function Footer() {
           <div className={style.auth}>
             <Image src={isms} alt='iso 로고' className={style.authLogo}></Image>
             <span className={style.text}>
-              [인증범위] 직투 서비스 운영<br/>
+              [인증범위] 카사 서비스 운영<br/>
               [유효기간] 2022.11.16 ~ 2025.11.15
             </span>
           </div>

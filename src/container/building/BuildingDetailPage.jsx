@@ -31,7 +31,7 @@ function BuildingDetailPage() {
 
       <div className={style.about}>
         <div className={style.aboutWrap}>
-         직투의 건물 지분투자는 전자등록 방식으로 발행된 부동산 신탁 수익증권에 투자하는 부동산 간접투자 방식입니다.
+         카사의 건물 지분투자는 전자등록 방식으로 발행된 부동산 신탁 수익증권에 투자하는 부동산 간접투자 방식입니다.
         </div>
       </div>
       <div className={style.investInfoWrap}>

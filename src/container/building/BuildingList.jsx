@@ -46,7 +46,7 @@ export function BuildingList() {
               <div className={style.cardTitle}>DABS 거래는 <br /> 어떻게 하는건가요?</div>
             </div>
             <div className={style.rightCard} onClick={goDetail}>
-              <div className={style.cardTitle}>왜 직투에서 <br /> 거래해야 할까요?</div>
+              <div className={style.cardTitle}>왜 카사에서 <br /> 거래해야 할까요?</div>
             </div>
           </div>
         </div>

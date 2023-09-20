@@ -12,11 +12,11 @@ function CorpInfo() {
           title={'법인 회원'}
           isCorp={0}
           header1={'법인회원으로 가입을 원하시는 경우,'}
-          header2={'법인 고객 상담팀(support@ziktu.com)으로 요청 주시면 도움 드리겠습니다.'}
+          header2={'법인 고객 상담팀(support@kasa.com)으로 요청 주시면 도움 드리겠습니다.'}
       />
       
       <div className={style.btnWrap}>
-        <Link href='mailto:"support@ziktu.com"'>
+        <Link href='mailto:"support@kasa.com"'>
           <Button
             className={style.helpBtn}
             title='문의하기'

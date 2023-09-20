@@ -20,7 +20,7 @@ function EventDetailPage() {
             <Image src={eventDetail.detailImg} width={337} height={836}  alt='상세이미지'></Image>
             :
             <div>
-                친구가 직투에 가입하면 5천원을 드려요!<br/>
+                친구가 카사에 가입하면 5천원을 드려요!<br/>
                 추천받은 친구도 계좌연결하면 5천원을 받아요!
             </div>
             }

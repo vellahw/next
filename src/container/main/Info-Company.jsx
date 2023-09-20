@@ -25,7 +25,7 @@ function CompanyInfo() {
     <section className={style.container}>
       <SectionHeader 
           title={'회사 소개'}
-          header1={'직투는 누구나 쉽게 부동산에 투자하고'}
+          header1={'카사는 누구나 쉽게 부동산에 투자하고'}
           header2={'그 권리를 사고 팔 수 있는'}
           header3={'부동산 조각 투자 플랫폼입니다.'}
         />
@@ -46,7 +46,7 @@ function CompanyInfo() {
         <div className={style.card_right}>
           <CompanyCardTitle
             title={'기대하세요'}
-            description1={'빌딩 상장 시대를 만들어 나갈 직투에'}
+            description1={'빌딩 상장 시대를 만들어 나갈 카사에'}
             description2={'국내외 대표 투자사,'}
             description3={'금융기관이 투자 하였습니다.'}
           />

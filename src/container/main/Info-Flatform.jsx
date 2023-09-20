@@ -13,7 +13,7 @@ function FlatformInfo() {
           title={'플랫폼 소개'}
           isFlat={0}
           header1={'상업용 부동산 투자,'}
-          header2={'직투에서 쉽고 간편하게.'}
+          header2={'카사에서 쉽고 간편하게.'}
         />
 
         <div className={style.cardWrap}>
